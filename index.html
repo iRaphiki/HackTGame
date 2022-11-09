@@ -1,31 +1,104 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			http-equiv="X-UA-Compatible"
-			content="IE=edge" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0" />
-		<title>HackTGame</title>
-		<link
-			rel="stylesheet"
-			href="assets/css/style.css" />
-		<script
-			src="https://kit.fontawesome.com/d5e3a4bc3e.js"
-			crossorigin="anonymous"></script>
-	</head>
-	<body>
-		<header>
-			<nav id="navbar"></nav>
-			<div id="slider"></div>
-		</header>
-		<main>
-			<section id="gamer"></section>
-			<section id="card"></section>
-		</main>
-		<footer></footer>
-	</body>
-	<script src="assets/js/app.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HackTGame</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&family=Titillium+Web:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/d5e3a4bc3e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav id="navbar"></nav>
+      <div id="slider"></div>
+    </header>
+    <main>
+      <section id="gamer">
+        <!-- Header players -->
+        <div class="header-info-players">
+          <!-- <h1 class="our-team">Our Team <span>& Players</span></h1> -->
+          <div class="header-text-players">
+            <h2 class="our-team">Our Team</h2>
+            <h2 class="and-players">& Players</h2>
+          </div>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium
+            eaque numquam quia aperiam voluptatem laborum maxime sed, tempora
+            incidunt temporibus esse? Dolor possimus dolorum facilis cumque cum,
+            necessitatibus mollitia doloremque, blanditiis iusto neque pariatur.
+            Voluptates.
+          </p>
+        </div>
+        <div class="player-container">
+          <div id="player1">
+            <div class="image-box">
+              <img
+                src="img/players/player-1.jpg"
+                alt="Avatar"
+                class="image"
+                id="p1img"
+              />
+              <div class="name-bottom">
+                <button>MASTERG</button>
+              </div>
+              <div class="overlay">
+                <a href="#" class="icon" title="User Profile">
+                  <i class="fa-solid fa-circle-plus"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div id="player2">
+            <div class="image-box">
+              <img
+                src="img/players/player-2.jpg"
+                alt="Avatar"
+                class="image"
+                id="p2img"
+              />
+              <div class="name-bottom">
+                <button>W-QUEEN</button>
+              </div>
+              <div class="overlay">
+                <a href="#" class="icon" title="User Profile">
+                  <i class="fa-solid fa-circle-plus"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div id="player3">
+            <div class="image-box">
+              <img
+                src="img/players/player-3.jpg"
+                alt="Avatar"
+                class="image"
+                id="p3img"
+              />
+              <div class="name-bottom">
+                <button>WIZARD</button>
+              </div>
+              <div class="overlay">
+                <a href="#" class="icon" title="User Profile">
+                  <i class="fa-solid fa-circle-plus"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="card"></section>
+    </main>
+    <footer></footer>
+  </body>
+  <script src="assets/js/app.js"></script>
 </html>
