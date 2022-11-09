@@ -1,38 +1,117 @@
 @font-face {
-	font-family: '';
-	src: url();
+  font-family: "Poppins", sans-serif;
+  src: url("../webfonts/Poppins/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: "Titillium Web", sans-serif;
+  src: url("../webfonts/Titillium_Web/TitilliumWeb-Regular.ttf");
 }
 *,
 ::before,
 ::after {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	box-sizing: border-box;
-	outline: 0 none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  outline: 0 none;
 }
 :root {
-	--blue: #0d6efd;
-	--indigo: #6610f2;
-	--purple: #6f42c1;
-	--pink: #d63384;
-	--red: #dc3545;
-	--orange: #fd7e14;
-	--yellow: #ffc107;
-	--green: #198754;
-	--teal: #20c997;
-	--cyan: #0dcaf0;
-	--lightBlack: #181a1b;
-	--black: #000;
-	--white: #fff;
+  --yellow: #ffc107;
+  --lightBlack: #181a1b;
+  --white: #fff;
 }
+body {
+  background-color: var(--lightBlack);
+  padding-left: 15px;
+  padding-right: 20px;
+}
+
+.login_p {
+  padding-top: 40px;
+  color: white;
+  border-bottom: solid 1px var(--white);
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
+  position: relative;
+}
+.btn__close {
+  background-color: transparent;
+  border: 0;
+  color: var(--white);
+  font-size: 3em;
+  position: absolute;
+  right: 0.5em;
+  top: 2px;
+}
+
+.icons_login {
+  color: var(--white);
+  font-size: 20px;
+  margin-top: 3rem;
+  padding-left: 2em;
+}
+.login,
+.signUp {
+  width: 9em;
+  height: 2.5em;
+  margin-top: 30px;
+  font-size: 1.2em;
+  font-weight: 525;
+  background-color: var(--yellow);
+  color: white;
+  box-shadow: 1px 1px 1px 1px var(--lightBlack);
+}
+.login:hover,
+.signUp:hover {
+  color: var(--lightBlack);
+  cursor: pointer;
+
+}
+.botones_div {
+  display: inline-flex;
+}
+
+/* Starting Footer */
+/*.footer_h3{
+  color: white;
+  text-align: center;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 1.5rem;
+  padding-top: 10px;
+  margin-bottom: -20px;
+}
+.footer {
+  color: white;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  padding-bottom: 10px;
+  background-color: var(--lightBlack);
+  width: 100%;
+}
+span {
+  color: var(--yellow);
+} */
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+@media (min-width: 643px) {
+  .icons_login{
+    margin-left: 60px ;
+  }
+  .login, .signUp{
+    width: 19em;
+  }
+  .border-x{
+    margin-right: 2.5em;
+  }
+.btn__close{
+position: absolute;
+top: 30px;
+}
 }
 
 /* Large devices (desktops, 992px and up) */
