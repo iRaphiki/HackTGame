@@ -62,6 +62,7 @@
   margin: 1rem 0 1.5rem;
 }
 #card .card-body a {
+  font-family: "Poppins", sans-serif;
   color: grey;
   text-decoration: none;
   margin-left: 0.3rem;
