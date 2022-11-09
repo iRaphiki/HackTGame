@@ -1,7 +1,12 @@
 @font-face {
-	font-family: '';
+	font-family: 'Poppins', sans-serif;
 	src: url();
 }
+@font-face {
+	font-family: 'Titillium Web', sans-serif;
+	src: url();
+}
+
 *,
 ::before,
 ::after {
