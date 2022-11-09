@@ -1,35 +1,28 @@
 @font-face {
-	font-family: 'Poppins', sans-serif;
-	src: url();
+  font-family: "Poppins", sans-serif;
+  src: url("../webfonts/Poppins/Poppins-Regular.ttf");
 }
 @font-face {
-	font-family: 'Titillium Web', sans-serif;
-	src: url();
+  font-family: "Titillium Web", sans-serif;
+  src: url("../webfonts/Titillium_Web/TitilliumWeb-Regular.ttf");
 }
 
 *,
 ::before,
 ::after {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	box-sizing: border-box;
-	outline: 0 none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  outline: 0 none;
 }
 :root {
-	--blue: #0d6efd;
-	--indigo: #6610f2;
-	--purple: #6f42c1;
-	--pink: #d63384;
-	--red: #dc3545;
-	--orange: #fd7e14;
-	--yellow: #ffc107;
-	--green: #198754;
-	--teal: #20c997;
-	--cyan: #0dcaf0;
-	--lightBlack: #181a1b;
-	--black: #000;
-	--white: #fff;
+  --black: #000;
+  --white: #fff;
+  --yellow: #ffc311;
+  --letraCuerpo: #7d7d7e;
+  --tituloCardsNegro: #282828;
+  --footerBg:#070707;
 }
 
 /* Small devices (landscape phones, 576px and up) */
