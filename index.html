@@ -19,9 +19,42 @@
   </head>
   <body>
     <header>
-      <nav id="navbar"></nav>
+      <nav id="navbar">
+        <div id="login">
+          <div class="login-header">
+            <div class="close" title="Close Modal">X</div>
+            <h2>LOGIN</h2>
+          </div>
+          <div class="login-main">
+            <form action="modal-login" method="post">
+              <input
+                type="text"
+                placeholder="Username"
+                name="user-name"
+                required
+              />
+              <input
+                type="password"
+                placeholder="Password"
+                name="password"
+                required
+              />
+              <label>
+                <input type="checkbox" checked="checked" name="remember" />
+                Remember Me
+              </label>
+              <button type="submit">SIGN IN</button>
+            </form>
+          </div>
+          <div class="login-footer">
+            <a href="#">Lost Password?</a>
+            <a href="#">Create an Account</a>
+          </div>
+        </div>
+      </nav>
       <div id="slider"></div>
     </header>
+
     <main>
       <section id="gamer"></section>
       <section id="card">
