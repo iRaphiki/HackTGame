@@ -95,6 +95,59 @@
   .links {
     display: none;
   }
+  .menu_container {
+    display: none;
+    background-color: #181a1b;
+  }
+  .menu_container.open {
+    display: block;
+  }
+
+  .login_p {
+    padding-top: 40px;
+    color: white;
+    border-bottom: solid 1px var(--white);
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .btn__close {
+    background-color: transparent;
+    color: var(--white);
+    font-size: 2em;
+    font-weight: bolder;
+    position: absolute;
+    right: 1.5em;
+    top: 40px;
+    z-index: 5;
+    cursor: pointer;
+  }
+
+  .icons_login {
+    color: var(--white);
+    font-size: 20px;
+    margin-top: 3rem;
+    padding-left: 1.6em;
+  }
+  .login,
+  .signUp {
+    width: 8em;
+    height: 2.2em;
+    margin-top: 30px;
+    font-size: 1.2em;
+    font-weight: 525;
+    background-color: var(--yellow);
+    color: white;
+    box-shadow: 1px 1px 1px 1px var(--lightBlack);
+  }
+  .login:hover,
+  .signUp:hover {
+    color: var(--lightBlack);
+    cursor: pointer;
+  }
+  .botones_div {
+    display: inline-flex;
+  }
   /* Prueba de archivo desplegable  */
   header .dismissible {
     opacity: 0 !important;
