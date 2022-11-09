@@ -22,7 +22,61 @@
   --yellow: #ffc311;
   --letraCuerpo: #7d7d7e;
   --tituloCardsNegro: #282828;
-  --footerBg:#070707;
+  --footerBg: #070707;
+}
+/* CARTAS  */
+/* MOBILE FIRST  */
+#card h2 {
+  font-size: 3.5rem;
+  font-family: "Titillium web", sans-serif;
+}
+#card h4 {
+  font-family: "Titillium web", sans-serif;
+  font-size: 2rem;
+  color: var(--tituloCardsNegro);
+}
+#card p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+}
+#card .our-games {
+  padding: 2rem;
+}
+#card .our-games h2 span {
+  color: var(--yellow);
+}
+/* CARDS */
+#card .card-individual {
+  margin: 2.5rem 0;
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.38);
+  -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.38);
+}
+/* CARD BODY  */
+#card .card-body {
+  padding: 1rem;
+}
+#card .card-body h4:hover,
+#card .card-body a:hover {
+  color: var(--yellow);
+}
+/*  CARD IMG  */
+#card .card-img-top {
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+}
+/* CARD ICON & ANCHOR  */
+#card i.fa-desktop {
+  margin: 1rem 0 1.5rem;
+}
+#card .card-body a {
+  color: grey;
+  text-decoration: none;
+  margin-left: 0.3rem;
+}
+#card .card-body a:hover {
+  color: var(--yellow);
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -31,10 +85,26 @@
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .all-cards {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  #card .card-individual {
+    max-width: 30%;
+    margin: 0;
+  }
+  #card > div > p {
+    margin-bottom: 1.5rem;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  #card .card-individual {
+    max-width: 30%;
+  }
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
