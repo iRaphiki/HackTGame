@@ -1,12 +1,3 @@
-@font-face {
-  font-family: "Poppins", sans-serif;
-  src: url("../webfonts/Poppins/Poppins-Regular.ttf");
-}
-@font-face {
-  font-family: "Titillium Web", sans-serif;
-  src: url("../webfonts/Titillium_Web/TitilliumWeb-Regular.ttf");
-}
-
 *,
 ::before,
 ::after {
