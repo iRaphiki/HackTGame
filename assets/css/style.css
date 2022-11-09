@@ -20,56 +20,6 @@
   --lightBlack: #181a1b;
   --white: #fff;
 }
-body {
-  background-color: var(--lightBlack);
-  padding-left: 15px;
-  padding-right: 20px;
-}
-
-.login_p {
-  padding-top: 40px;
-  color: white;
-  border-bottom: solid 1px var(--white);
-  font-family: "Poppins", sans-serif;
-  margin-bottom: 10px;
-  position: relative;
-}
-.btn__close {
-  background-color: transparent;
-  border: 0;
-  color: var(--white);
-  font-size: 3em;
-  position: absolute;
-  right: 0.5em;
-  top: 2px;
-}
-
-.icons_login {
-  color: var(--white);
-  font-size: 20px;
-  margin-top: 3rem;
-  padding-left: 2em;
-}
-.login,
-.signUp {
-  width: 9em;
-  height: 2.5em;
-  margin-top: 30px;
-  font-size: 1.2em;
-  font-weight: 525;
-  background-color: var(--yellow);
-  color: white;
-  box-shadow: 1px 1px 1px 1px var(--lightBlack);
-}
-.login:hover,
-.signUp:hover {
-  color: var(--lightBlack);
-  cursor: pointer;
-
-}
-.botones_div {
-  display: inline-flex;
-}
 
 /* Starting Footer */
 /*.footer_h3{
@@ -93,35 +43,82 @@ span {
   color: var(--yellow);
 } */
 
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
+@media (min-width: 364px) {
+  body {
+    background-color: var(--lightBlack);
+    width:85%;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  .menu_container {
+    display: none;
+    background-color: #181a1b;
+  }
+  .menu_container.open {
+    display: block;
+  }
+
+  .login_p {
+    padding-top: 40px;
+    color: white;
+    border-bottom: solid 1px var(--white);
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .btn__close {
+    background-color: transparent;
+    color: var(--white);
+    font-size: 2em;
+    font-weight: bolder;
+    position: absolute;
+    right: 1.5em;
+    top: 40px;
+    z-index: 5;
+    cursor: pointer;
+  }
+
+  .icons_login {
+    color: var(--white);
+    font-size: 20px;
+    margin-top: 3rem;
+    padding-left: 1.6em;
+  }
+  .login,
+  .signUp {
+    width: 8em;
+    height: 2.2em;
+    margin-top: 30px;
+    font-size: 1.2em;
+    font-weight: 525;
+    background-color: var(--yellow);
+    color: white;
+    box-shadow: 1px 1px 1px 1px var(--lightBlack);
+  }
+  .login:hover,
+  .signUp:hover {
+    color: var(--lightBlack);
+    cursor: pointer;
+  }
+  .botones_div {
+    display: inline-flex;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 643px) {
-  .icons_login{
-    margin-left: 60px ;
+@media (min-width: 768px) {
+  .icons_login {
+    margin-left: 60px;
   }
-  .login, .signUp{
+  .login,
+  .signUp {
     width: 19em;
   }
-  .border-x{
+  .border-x {
     margin-right: 2.5em;
   }
-.btn__close{
-position: absolute;
-top: 30px;
-}
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-}
-
-/* X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-}
-
-/* XX-Large devices (larger desktops, 1400px and up) */
-@media (min-width: 1400px) {
+  .btn__close {
+    position: absolute;
+    top: 29px;
+  }
 }

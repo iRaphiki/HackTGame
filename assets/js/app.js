@@ -1,7 +1,4 @@
-// window.onload = function () {
-//     document.getElementsByClassName("btn_close").onclick = function () {
-//       this.parentNode.parentNode.remove();
-//       return false;
-//     };
-//   };
-  
+//FUNCIÓN BOTÓN CLOSE
+document.querySelector(".btn__close").addEventListener("click", () => {
+  document.querySelector(".menu_container").classList.toggle("open");
+});
