@@ -1,119 +1,132 @@
 @font-face {
-	font-family: 'Poppins', sans-serif;
-	src: url('../webfonts/Poppins/Poppins-Regular.ttf');
+  font-family: "Poppins", sans-serif;
+  src: url("../webfonts/Poppins/Poppins-Regular.ttf");
 }
 @font-face {
-	font-family: 'Titillium Web', sans-serif;
-	src: url('../webfonts/Titillium_Web/TitilliumWeb-Regular.ttf');
+  font-family: "Titillium Web", sans-serif;
+  src: url("../webfonts/Titillium_Web/TitilliumWeb-Regular.ttf");
 }
 *,
 ::before,
 ::after {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	box-sizing: border-box;
-	outline: 0 none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  outline: 0 none;
 }
 :root {
-	--yellow: #ffc107;
-	--lightBlack: #181a1b;
-	--white: #fff;
+  --yellow: #ffc107;
+  --lightBlack: #181a1b;
+  --white: #fff;
 }
 
 /* Starting Footer */
-/*.footer_h3{
+.footer_h3 {
   color: white;
   text-align: center;
   font-family: "Titillium Web", sans-serif;
   font-size: 1.5rem;
   padding-top: 10px;
-  margin-bottom: -20px;
 }
 .footer {
   color: white;
   text-align: center;
   font-family: "Poppins", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding-bottom: 10px;
   background-color: var(--lightBlack);
   width: 100%;
 }
 span {
   color: var(--yellow);
-} */
+}
+/* Menú desplegable*/
+.menu_container {
+  display: none;
+  background-color: #181a1b;
+}
+.menu_container.open {
+  display: block;
+}
 
-@media (min-width: 364px) {
-	.menu_container {
-		display: none;
-		background-color: #181a1b;
-	}
-	.menu_container.open {
-		display: block;
-	}
+.login_a {
+  padding-top: 48px;
+  color: white;
+  border-bottom: solid 1px var(--white);
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
+  position: relative;
+  display: block;
+}
+.login_a:hover {
+  color: #ffc107;
+  cursor: pointer;
+}
+.btn__close {
+  background-color: var(--lightBlack);
+  color: var(--white);
+  font-size: 2em;
+  font-weight: bolder;
+  position: absolute;
+  right: 1.5em;
+  top: 20px;
+  z-index: 5;
+}
+.btn__close:hover {
+  cursor: pointer;
+  color: #ffc107;
+}
 
-	.login_p {
-		padding-top: 40px;
-		color: white;
-		border-bottom: solid 1px var(--white);
-		font-family: 'Poppins', sans-serif;
-		margin-bottom: 10px;
-		position: relative;
-	}
-	.btn__close {
-		background-color: transparent;
-		color: var(--white);
-		font-size: 2em;
-		font-weight: bolder;
-		position: absolute;
-		right: 1.5em;
-		top: 40px;
-		z-index: 5;
-		cursor: pointer;
-	}
-
-	.icons_login {
-		color: var(--white);
-		font-size: 20px;
-		margin-top: 3rem;
-		padding-left: 1.6em;
-	}
-	.login,
-	.signUp {
-		width: 50%;
-		height: 2.2em;
-		margin-top: 30px;
-		font-size: 1.2em;
-		font-weight: 525;
-		background-color: var(--yellow);
-		color: white;
-		box-shadow: 1px 1px 1px 1px var(--lightBlack);
-	}
-	.login:hover,
-	.signUp:hover {
-		color: var(--lightBlack);
-		cursor: pointer;
-	}
-	.botones_div {
-		display: inline-flex;
-    width: 100%;
-	}
+.icons_login {
+  color: var(--white);
+  font-size: 20px;
+}
+.icons_login:hover {
+  color: var(--yellow);
+}
+.icons_div {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+}
+.login,
+.signUp {
+  width: 50%;
+  height: 2.2em;
+  margin-top: 30px;
+  font-size: 1.2em;
+  font-weight: 525;
+  background-color: var(--yellow);
+  color: white;
+  box-shadow: 1px 1px 1px 1px var(--lightBlack);
+}
+.login:hover,
+.signUp:hover {
+  color: var(--lightBlack);
+  cursor: pointer;
+}
+.botones_div {
+  display: inline-flex;
+  width: 100%;
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-	.btn__close {
-		position: absolute;
-		top: 10px;
-	}
+  .btn__close {
+    position: absolute;
+    top: 60px;
+  }
 }
 #container {
-	width: 85%;
-	float: right;
+  width: 85%;
+  float: right;
   height: 100vh;
   background-color: var(--lightBlack);
 }
-#container > div  {
+#container > div {
   padding: 1em;
   align-items: center;
 }
