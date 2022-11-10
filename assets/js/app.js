@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+/* ------------------SCROLL-TOP---------------------------- */
 let alert = document.querySelector(".alert");
 let menu = document.querySelector(".hamburger");
 //let clsbtn = document.querySelector(".btn__close");
@@ -23,7 +23,9 @@ let menu = document.querySelector(".hamburger");
  });
 
 // console.log(window.pageYOffset);
-=======
+
+
+/* ------------------MODAL-BOX---------------------------- */
 // Open and close modal/login window
 const loginWindow = () => {
   window.addEventListener("load", () => {
@@ -54,4 +56,4 @@ const loginWindow = () => {
   });
 };
 loginWindow();
->>>>>>> origin/feature_AnaLR27
+

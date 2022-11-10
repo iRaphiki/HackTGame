@@ -560,8 +560,6 @@ a.icon {
   #card .card-individual {
     max-width: 30%;
   }
-}
-
 
   #navbar {
     position: fixed;
@@ -668,6 +666,7 @@ a.icon {
   .player-container button {
     width: 20vw;
   }
+}
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
