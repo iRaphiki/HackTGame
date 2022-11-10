@@ -14,7 +14,6 @@
   --letraCuerpo: #7d7d7e;
   --tituloCardsNegro: #282828;
   --footerBg: #070707;
-
 }
 
 h1,
@@ -159,10 +158,10 @@ a.icon {
   height: -100%;
   width: 70%;
   transition: 0.3s;
-
 }
 /* LOGIN */
-#login-box, #signup-box {
+#login-box,
+#signup-box {
   padding: 2em;
   width: 100%;
   height: 100vh;
@@ -292,7 +291,97 @@ a.icon {
 }
 #card .card-body a:hover {
   color: var(--yellow);
+}
+/* Starting Footer */
+.footer_h3 {
+  color: var(--white);
+  text-align: center;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 1.5rem;
+  padding-top: 10px;
+}
+.footer {
+  color: var(--white);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  padding-bottom: 10px;
+  background-color: var(--footerBg);
+  width: 100%;
+}
+.span {
+  color: var(--yellow);
+}
+/* Menú desplegable*/
+.menu_container {
+  display: none;
+  background-color: #181a1b;
+}
+.menu_container.open {
+  display: block;
+}
 
+.login_a {
+  padding-top: 48px;
+  color: white;
+  border-bottom: solid 1px var(--white);
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
+  position: relative;
+  display: block;
+}
+.login_a:hover {
+  color: #ffc107;
+  cursor: pointer;
+}
+.btn__close {
+  background-color: var(--lightBlack);
+  color: var(--white);
+  font-size: 2em;
+  font-weight: bolder;
+  position: absolute;
+  right: 1.5em;
+  top: 20px;
+  z-index: 5;
+}
+.btn__close:hover {
+  cursor: pointer;
+  color: #ffc107;
+}
+
+.icons_login {
+  color: var(--white);
+  font-size: 20px;
+}
+.icons_login:hover {
+  color: var(--yellow);
+}
+.icons_div {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+}
+.login,
+.signUp {
+  width: 50%;
+  height: 2.2em;
+  margin-top: 30px;
+  font-size: 1.2em;
+  font-weight: 525;
+  background-color: var(--yellow);
+  color: white;
+  box-shadow: 1px 1px 1px 1px var(--lightBlack);
+}
+.login:hover,
+.signUp:hover {
+  color: var(--lightBlack);
+  cursor: pointer;
+}
+.botones_div {
+  display: inline-flex;
+  width: 100%;
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -300,7 +389,6 @@ a.icon {
   body {
     width: 100%;
     height: 100%;
-   
   }
   #navbar {
     position: fixed;
@@ -437,11 +525,9 @@ a.icon {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-
   body {
     width: 100%;
     height: 100%;
-   
   }
   .title {
     display: flex;
@@ -541,15 +627,27 @@ a.icon {
   #card > div > p {
     margin-bottom: 1.5rem;
   }
+  .btn__close {
+    position: absolute;
+    top: 60px;
+  }
+  #container {
+    width: 85%;
+    float: right;
+    height: 100vh;
+    background-color: var(--lightBlack);
+  }
+  #container > div {
+    padding: 1em;
+    align-items: center;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-
   body {
     width: 100%;
     height: 100%;
-   
   }
   #login-box,
   #signup-box {
@@ -567,7 +665,7 @@ a.icon {
     left: 0;
     width: 100%;
     height: 100px;
-    transition:0.5s ;
+    transition: 0.5s;
   }
   .title {
     display: flex;
@@ -657,7 +755,6 @@ a.icon {
     color: var(--yellow);
   }
 
-
   .player-container {
     display: flex;
     justify-content: space-around;
@@ -679,5 +776,3 @@ a.icon {
     max-width: 100%;
   }
 }
-
-

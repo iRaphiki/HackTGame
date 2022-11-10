@@ -24,6 +24,11 @@ let menu = document.querySelector(".hamburger");
 
 // console.log(window.pageYOffset);
 
+//FUNCIÓN BOTÓN CLOSE
+document.querySelector(".btn__close").addEventListener("click", () => {
+  document.querySelector(".menu_container").classList.toggle("open");
+});
+
 
 /* ------------------MODAL-BOX---------------------------- */
 // Open and close modal/login window
