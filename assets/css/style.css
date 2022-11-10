@@ -24,49 +24,46 @@
   --tituloCardsNegro: #282828;
   --footerBg: #070707;
 }
+#gamer {
+  padding: 1em;
+}
 
 /* Header text and paragraph */
 .header-info-players > div h2 {
-  padding-left: 0.4em;
-  /* text-indent: 50px; */
   line-height: 1;
+  font-size: 2.7rem;
 }
 .header-info-players h2:nth-of-type(1) {
-  padding-top: 0.4em;
+  padding-top: 0.1em;
 }
 .header-info-players h2:nth-of-type(2) {
   color: #ffc311;
 }
-
-/* Other title option, doesn't make a difference */
-/* span {
-  display: inline;
-}
-span:before {
-  content: "\a ";
-  white-space: pre;
-} */
 #gamer p {
-  margin-left: 1em;
-  margin-right: 1em;
+  line-height: 1.4;
   color: #7d7d7e;
   font-family: "Poppins Web", sans-serif;
+  font-weight: 200;
   font-size: 0.9rem;
-  padding-top: 0.7em;
+  padding-top: 0.9em;
 }
 
 /* Images container */
+.player-container {
+  padding-top: 1.8em;
+  justify-content: space-between;
+  gap: 20px;
+}
 div .image {
   position: relative;
   width: 100%;
   object-fit: cover;
   display: block;
-  /* padding: 0.8em; */
 }
 .image-box {
   position: relative;
   width: 100%;
-  /* height: 0; */
+
   overflow: hidden;
   box-shadow: 0 4px 10px rgb(0 0 0 / 0.3);
 }
@@ -75,7 +72,7 @@ div .image {
   text-align: center;
   padding-bottom: 2rem;
 }
-/* Button over image and felx for icon */
+/* Button over image and flex for icon */
 .name-bottom,
 .overlay {
   position: absolute;
@@ -93,7 +90,7 @@ div .image {
   border: none;
   color: black;
   padding: 14px;
-  width: 60vw;
+  width: 50vw;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -107,28 +104,21 @@ div .image {
   align-items: center;
 }
 
-.hvr-sink:hover, .hvr-sink:focus, .hvr-sink:active {
+.hvr-sink:hover,
+.hvr-sink:focus,
+.hvr-sink:active {
   -webkit-transform: translateY(8px);
   transform: translateY(8px);
 }
 
 /* Hover icon */
-.player-container {
-  margin: 0.5em;
-  justify-content: space-between;
-  padding: 15px;
-  gap: 20px;
-  /* text-align: center; */
-  /* width: 100%;
-  height: auto;
-  padding: 0.8em; */
-}
+
 .overlay {
   top: -100%;
   height: 100%;
   width: 100%;
   transition: 0.3s ease;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 a.icon {
   color: white;
@@ -148,7 +138,6 @@ a.icon {
   height: -100%;
   width: 70%;
   transition: 0.3s;
-  
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -160,8 +149,7 @@ a.icon {
   .player-container {
     display: flex;
     justify-content: space-around;
-    /* position: relative; */
-    /* padding: 0.9em; */
+    padding: 0.9em;
   }
   .player-container button {
     width: 20vw;
@@ -173,12 +161,8 @@ a.icon {
   .player-container {
     display: flex;
     justify-content: space-around;
-    /* position: relative; */
-    /* padding: 0.9em; */
   }
-  .image-box {
-    /* padding: 0 0.9em; */
-  }
+
   .player-container button {
     width: 20vw;
   }
@@ -190,10 +174,8 @@ a.icon {
 
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
-  #gamer{
-    display: flex;
+  #gamer {
     max-width: 100%;
-    padding: 50px;
   }
 }
 
