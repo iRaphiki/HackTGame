@@ -24,13 +24,18 @@
   --tituloCardsNegro: #282828;
   --footerBg: #070707;
 }
-/* Small devices (landscape phones, 374px and up) */
-@media (min-width: 374px) {
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
   body {
     width: 100%;
     height: 100%;
-    /* background-color para trabajar */
-    background-color: gray;
+   
+  }
+  #navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
   }
 
   .title {
@@ -42,6 +47,11 @@
     font-weight: bold;
     font-family: "Titillium Web", sans-serif;
   }
+  .banner {
+    width: 100%;
+    height: 100px;
+    background-color: var(--white);
+  }
   header {
     overflow: hidden;
   }
@@ -52,11 +62,8 @@
     float: right;
     margin-top: 1em;
   }
-  .miLink {
-    display: none;
-  }
   .white {
-    color: var(--white);
+    color: var(--black);
   }
   .yellow {
     color: var(--yellow);
@@ -85,7 +92,7 @@
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
   }
-  .singup {
+  .signup {
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
   }
@@ -95,7 +102,8 @@
   .links {
     display: none;
   }
-  .menu_container {
+  /* desplegable */
+  /* .menu_container {
     display: none;
     background-color: #181a1b;
   }
@@ -147,7 +155,7 @@
   }
   .botones_div {
     display: inline-flex;
-  }
+  } */
   /* Prueba de archivo desplegable  */
   header .dismissible {
     opacity: 0 !important;
@@ -157,83 +165,12 @@
   }
 }
 
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-  body {
-    width: 100%;
-    height: 100%;
-    /* background-color para trabajar */
-    background-color: gray;
-  }
-
-  .title {
-    display: flex;
-    justify-content: left;
-    align-items: flex-start;
-    margin-top: 2em;
-    margin-left: 2em;
-    font-weight: bold;
-    font-family: "Titillium Web", sans-serif;
-  }
-  header {
-    overflow: hidden;
-  }
-  header .title {
-    float: left;
-  }
-  header .hamburger {
-    float: right;
-    margin-top: 1em;
-  }
-  .white {
-    color: var(--white);
-  }
-  .yellow {
-    color: var(--yellow);
-  }
-  .hamburger {
-    display: flex;
-    justify-content: right;
-    align-items: flex-start;
-  }
-  header .hamburger .title {
-    display: inline;
-  }
-  .buttons {
-    display: none;
-    justify-content: right;
-    align-items: flex-start;
-  }
-
-  button {
-    background-color: var(--yellow);
-    color: white;
-    padding: 1em 2.5em 1em 2.5em;
-    font-weight: bold;
-  }
-  .login {
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-  }
-  .singup {
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-  }
-  .icons {
-    display: none;
-  }
-  .links {
-    display: none;
-  }
-}
-
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   body {
     width: 100%;
     height: 100%;
-    /* background-color para trabajar */
-    background-color: gray;
+   
   }
   .title {
     display: flex;
@@ -245,7 +182,7 @@
     font-family: "Titillium Web", sans-serif;
   }
   .white {
-    color: var(--white);
+    color: var(--black);
   }
   .yellow {
     color: var(--yellow);
@@ -279,7 +216,7 @@
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
   }
-  .singup {
+  .signup {
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
   }
@@ -312,8 +249,16 @@
   body {
     width: 100%;
     height: 100%;
-    /* background-color para trabajar */
-    background-color: gray;
+   
+  }
+
+  #navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    transition:0.5s ;
   }
   .title {
     display: flex;
@@ -324,17 +269,16 @@
     font-weight: 900;
     font-family: "Titillium Web", sans-serif;
   }
+  .banner {
+    display: none;
+  }
   .white {
     color: var(--white);
   }
   .yellow {
     color: var(--yellow);
   }
-  .hamburger {
-    display: none;
-    justify-content: right;
-    align-items: flex-start;
-  }
+
   .mix {
     display: flex;
     justify-content: end;
@@ -367,7 +311,7 @@
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
   }
-  .singup {
+  .signup {
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
   }
@@ -403,8 +347,6 @@
     background-color: transparent;
     color: var(--yellow);
   }
-  
-  
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
