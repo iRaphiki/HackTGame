@@ -16,20 +16,19 @@
   --footerBg: #070707;
 }
 /* LOGIN */
-#login {
-  /* border: 1px solid black; */
+#login-box, #signup-box {
   padding: 2em;
   width: 100%;
   height: 100vh;
-  /* display: none; */
+  display: none;
 }
-#login .login-header h2 {
+.modal-header h2 {
   font-family: "Titillium web", sans-serif;
   font-size: 3.5rem;
   text-align: center;
   margin-bottom: 0.5em;
 }
-#login .login-header .close {
+.modal-header .close {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,13 +43,12 @@
   top: 0;
   right: 0;
 }
-
-#login .login-header .close:hover,
-#login .login-header .close:focus {
+.modal-header .close:hover,
+.modal-header .close:focus {
   color: black;
   background-color: var(--yellow);
 }
-#login .login-main form input {
+#login-box .modal-main form input {
   font-family: "Poppins", sans-serif;
   color: var(--letraCuerpo);
   width: 100%;
@@ -59,15 +57,15 @@
   padding: 1em;
   font-size: 1rem;
 }
-#login .login-main form input[type="checkbox"] {
+#login-box .modal-main form input[type="checkbox"] {
   width: auto;
   margin-right: 0.5em;
 }
-#login label {
+#login-box label {
   color: var(--letraCuerpo);
   font-family: "Poppins", sans-serif;
 }
-#login button {
+#login-box button {
   display: block;
   background-color: var(--yellow);
   color: white;
@@ -75,18 +73,23 @@
   padding: 1rem 2rem;
   margin: 1em 0;
 }
-#login .login-footer {
+#login-box .modal-footer {
   display: flex;
   justify-content: space-between;
   margin: 1.5em 0;
 }
-#login a {
+#login-box a {
   color: black;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
 }
-#login a:last-of-type {
+#login-box a:last-of-type {
   color: var(--letraCuerpo);
+}
+#signup-box .modal-main {
+  font-family: "Poppins", sans-serif;
+  color: var(--letraCuerpo);
+  text-align: center;
 }
 
 /* CARTAS  */
@@ -151,11 +154,13 @@
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  #login {
+  #login-box,
+  #signup-box {
     width: 70%;
     margin: auto;
     padding-top: 5em;
   }
+
   .all-cards {
     display: flex;
     gap: 2rem;
@@ -173,7 +178,8 @@
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  #login {
+  #login-box,
+  #signup-box {
     width: 50%;
     margin: auto;
     padding-top: 10em;

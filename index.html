@@ -18,45 +18,52 @@
     />
   </head>
   <body>
+    <!-- BOTON PRUEBA, ELIMINAR  -->
+    <button id="login" style="padding:2em" >LOGIN</button>
+    <button id="signup" style="padding:2em">SIGNUP</button>
+    <!-- LOGIN  -->
+    <div id="login-box">
+      <div class="modal-header">
+        <div id="close-modal" class="close" title="Close Modal">X</div>
+        <h2>LOGIN</h2>
+      </div>
+      <div class="modal-main">
+        <form action="modal-login" method="post">
+          <input type="text" placeholder="Username" name="user-name" required />
+          <input
+            type="password"
+            placeholder="Password"
+            name="password"
+            required
+          />
+          <label>
+            <input type="checkbox" checked="checked" name="remember" />
+            Remember Me
+          </label>
+          <button type="submit">SIGN IN</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <a href="#">Lost Password?</a>
+        <a href="#">Create an Account</a>
+      </div>
+    </div>
+    <div id="signup-box">
+      <div class="modal-header">
+        <div id="close-sign" class="close" title="Close Modal">X</div>
+        <h2>SIGN UP</h2>
+      </div>
+      <div class="modal-main">
+        <p>New membership are not allowed</p>
+      </div>
+    </div>
     <header>
-      <nav id="navbar">
-        <div id="login">
-          <div class="login-header">
-            <div class="close" title="Close Modal">X</div>
-            <h2>LOGIN</h2>
-          </div>
-          <div class="login-main">
-            <form action="modal-login" method="post">
-              <input
-                type="text"
-                placeholder="Username"
-                name="user-name"
-                required
-              />
-              <input
-                type="password"
-                placeholder="Password"
-                name="password"
-                required
-              />
-              <label>
-                <input type="checkbox" checked="checked" name="remember" />
-                Remember Me
-              </label>
-              <button type="submit">SIGN IN</button>
-            </form>
-          </div>
-          <div class="login-footer">
-            <a href="#">Lost Password?</a>
-            <a href="#">Create an Account</a>
-          </div>
-        </div>
-      </nav>
+      <nav id="navbar"></nav>
       <div id="slider"></div>
     </header>
-
     <main>
       <section id="gamer"></section>
+      <!-- CARDS  -->
       <section id="card">
         <div class="our-games">
           <h2>Our <span>Games</span></h2>
