@@ -1,14 +1,17 @@
 /* ------------------SCROLL-TOP---------------------------- */
-let alert = document.querySelector(".alert");
+//let alertBox = document.querySelector(".alert");
 let menu = document.querySelector(".hamburger");
-//let clsbtn = document.querySelector(".btn__close");
+let clsbtn = document.querySelector(".btn__close");
 
-// menu.addEventListener("click", (e) => {
-//   alert.classList.remove("dismissible");
-// });
-// clsbtn.addEventListener("click", (e) => {
-//   alert.classList.add("dismissible");
-// });
+menu.addEventListener("click", (e) => {
+  let alertBox = document.querySelector(".alert");
+  alertBox.classList.remove("dismissible");
+});
+clsbtn.addEventListener("click", (e) => {
+  let alertBox = document.querySelector(".alert");
+  alertBox.classList.add("dismissible");
+});
+
 // //  para scroll
  let lastScrollTop;
  navbar = document.getElementById("navbar");
@@ -57,3 +60,7 @@ const loginWindow = () => {
 };
 loginWindow();
 
+//FUNCIÓN BOTÓN CLOSE
+document.querySelector(".btn__close").addEventListener("click", () => {
+  document.querySelector(".menu_container").classList.toggle("open");
+});
