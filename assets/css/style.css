@@ -1,12 +1,3 @@
-@font-face {
-  font-family: "Poppins", sans-serif;
-  src: url("../webfonts/Poppins/Poppins-Regular.ttf");
-}
-@font-face {
-  font-family: "Titillium Web", sans-serif;
-  src: url("../webfonts/Titillium_Web/TitilliumWeb-Regular.ttf");
-}
-
 *,
 ::before,
 ::after {
@@ -23,6 +14,7 @@
   --letraCuerpo: #7d7d7e;
   --tituloCardsNegro: #282828;
   --footerBg: #070707;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }
@@ -141,6 +133,140 @@ a.icon {
   width: 70%;
   transition: 0.3s;
 >>>>>>> origin/feature_Cococod3
+=======
+}
+/* LOGIN */
+#login-box, #signup-box {
+  padding: 2em;
+  width: 100%;
+  height: 100vh;
+  display: none;
+}
+.modal-header h2 {
+  font-family: "Titillium web", sans-serif;
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+.modal-header .close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--tituloCardsNegro);
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.modal-header .close:hover,
+.modal-header .close:focus {
+  color: black;
+  background-color: var(--yellow);
+}
+#login-box .modal-main form input {
+  font-family: "Poppins", sans-serif;
+  color: var(--letraCuerpo);
+  width: 100%;
+  border: 1px solid var(--letraCuerpo);
+  margin: 1em 0;
+  padding: 1em;
+  font-size: 1rem;
+}
+#login-box .modal-main form input[type="checkbox"] {
+  width: auto;
+  margin-right: 0.5em;
+}
+#login-box label {
+  color: var(--letraCuerpo);
+  font-family: "Poppins", sans-serif;
+}
+#login-box button {
+  display: block;
+  background-color: var(--yellow);
+  color: white;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  margin: 1em 0;
+}
+#login-box .modal-footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5em 0;
+}
+#login-box a {
+  color: black;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+#login-box a:last-of-type {
+  color: var(--letraCuerpo);
+}
+#signup-box .modal-main {
+  font-family: "Poppins", sans-serif;
+  color: var(--letraCuerpo);
+  text-align: center;
+}
+
+/* CARTAS  */
+/* MOBILE FIRST  */
+#card h2 {
+  font-size: 3.5rem;
+  font-family: "Titillium web", sans-serif;
+}
+#card h4 {
+  font-family: "Titillium web", sans-serif;
+  font-size: 2rem;
+  color: var(--tituloCardsNegro);
+}
+#card p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+}
+#card .our-games {
+  padding: 2rem;
+}
+#card .our-games h2 span {
+  color: var(--yellow);
+}
+/* CARDS */
+#card .card-individual {
+  margin: 2.5rem 0;
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.38);
+  -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.38);
+}
+/* CARD BODY  */
+#card .card-body {
+  padding: 1rem;
+}
+#card .card-body h4:hover,
+#card .card-body a:hover {
+  color: var(--yellow);
+}
+/*  CARD IMG  */
+#card .card-img-top {
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+}
+/* CARD ICON & ANCHOR  */
+#card i.fa-desktop {
+  margin: 1rem 0 1.5rem;
+}
+#card .card-body a {
+  font-family: "Poppins", sans-serif;
+  color: grey;
+  text-decoration: none;
+  margin-left: 0.3rem;
+}
+#card .card-body a:hover {
+  color: var(--yellow);
+>>>>>>> origin/feature_AnaLR27
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -286,6 +412,7 @@ a.icon {
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   body {
     width: 100%;
     height: 100%;
@@ -369,17 +496,51 @@ a.icon {
   .player-container button {
     width: 20vw;
 >>>>>>> origin/feature_Cococod3
+=======
+  #login-box,
+  #signup-box {
+    width: 70%;
+    margin: auto;
+    padding-top: 5em;
+  }
+
+  .all-cards {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  #card .card-individual {
+    max-width: 30%;
+    margin: 0;
+  }
+  #card > div > p {
+    margin-bottom: 1.5rem;
+>>>>>>> origin/feature_AnaLR27
   }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   body {
     width: 100%;
     height: 100%;
    
   }
+=======
+  #login-box,
+  #signup-box {
+    width: 50%;
+    margin: auto;
+    padding-top: 10em;
+  }
+  #card .card-individual {
+    max-width: 30%;
+  }
+}
+>>>>>>> origin/feature_AnaLR27
 
   #navbar {
     position: fixed;
