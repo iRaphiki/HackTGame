@@ -22,7 +22,7 @@ let menu = document.querySelector(".hamburger");
    lastScrollTop = scrollTop;
  });
 
-// console.log(window.pageYOffset);
+
 
 
 /* ------------------MODAL-BOX---------------------------- */
