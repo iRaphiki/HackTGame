@@ -1,24 +1,24 @@
 @font-face {
-  font-family: "Poppins", sans-serif;
-  src: url("../webfonts/Poppins/Poppins-Regular.ttf");
+	font-family: 'Poppins', sans-serif;
+	src: url('../webfonts/Poppins/Poppins-Regular.ttf');
 }
 @font-face {
-  font-family: "Titillium Web", sans-serif;
-  src: url("../webfonts/Titillium_Web/TitilliumWeb-Regular.ttf");
+	font-family: 'Titillium Web', sans-serif;
+	src: url('../webfonts/Titillium_Web/TitilliumWeb-Regular.ttf');
 }
 *,
 ::before,
 ::after {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  box-sizing: border-box;
-  outline: 0 none;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	outline: 0 none;
 }
 :root {
-  --yellow: #ffc107;
-  --lightBlack: #181a1b;
-  --white: #fff;
+	--yellow: #ffc107;
+	--lightBlack: #181a1b;
+	--white: #fff;
 }
 
 /* Starting Footer */
@@ -44,81 +44,76 @@ span {
 } */
 
 @media (min-width: 364px) {
-  body {
-    background-color: var(--lightBlack);
-    width:85%;
-    margin-left: 20px;
-    margin-top: 20px;
-  }
-  .menu_container {
-    display: none;
-    background-color: #181a1b;
-  }
-  .menu_container.open {
-    display: block;
-  }
+	.menu_container {
+		display: none;
+		background-color: #181a1b;
+	}
+	.menu_container.open {
+		display: block;
+	}
 
-  .login_p {
-    padding-top: 40px;
-    color: white;
-    border-bottom: solid 1px var(--white);
-    font-family: "Poppins", sans-serif;
-    margin-bottom: 10px;
-    position: relative;
-  }
-  .btn__close {
-    background-color: transparent;
-    color: var(--white);
-    font-size: 2em;
-    font-weight: bolder;
-    position: absolute;
-    right: 1.5em;
-    top: 40px;
-    z-index: 5;
-    cursor: pointer;
-  }
+	.login_p {
+		padding-top: 40px;
+		color: white;
+		border-bottom: solid 1px var(--white);
+		font-family: 'Poppins', sans-serif;
+		margin-bottom: 10px;
+		position: relative;
+	}
+	.btn__close {
+		background-color: transparent;
+		color: var(--white);
+		font-size: 2em;
+		font-weight: bolder;
+		position: absolute;
+		right: 1.5em;
+		top: 40px;
+		z-index: 5;
+		cursor: pointer;
+	}
 
-  .icons_login {
-    color: var(--white);
-    font-size: 20px;
-    margin-top: 3rem;
-    padding-left: 1.6em;
-  }
-  .login,
-  .signUp {
-    width: 8em;
-    height: 2.2em;
-    margin-top: 30px;
-    font-size: 1.2em;
-    font-weight: 525;
-    background-color: var(--yellow);
-    color: white;
-    box-shadow: 1px 1px 1px 1px var(--lightBlack);
-  }
-  .login:hover,
-  .signUp:hover {
-    color: var(--lightBlack);
-    cursor: pointer;
-  }
-  .botones_div {
-    display: inline-flex;
-  }
+	.icons_login {
+		color: var(--white);
+		font-size: 20px;
+		margin-top: 3rem;
+		padding-left: 1.6em;
+	}
+	.login,
+	.signUp {
+		width: 50%;
+		height: 2.2em;
+		margin-top: 30px;
+		font-size: 1.2em;
+		font-weight: 525;
+		background-color: var(--yellow);
+		color: white;
+		box-shadow: 1px 1px 1px 1px var(--lightBlack);
+	}
+	.login:hover,
+	.signUp:hover {
+		color: var(--lightBlack);
+		cursor: pointer;
+	}
+	.botones_div {
+		display: inline-flex;
+    width: 100%;
+	}
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .icons_login {
-    margin-left: 60px;
-  }
-  .login,
-  .signUp {
-    width: 19em;
-  }
-  .border-x {
-    margin-right: 2.5em;
-  }
-  .btn__close {
-    position: absolute;
-    top: 29px;
-  }
+	.btn__close {
+		position: absolute;
+		top: 10px;
+	}
+}
+#container {
+	width: 85%;
+	float: right;
+  height: 100vh;
+  background-color: var(--lightBlack);
+}
+#container > div  {
+  padding: 1em;
+  align-items: center;
 }
