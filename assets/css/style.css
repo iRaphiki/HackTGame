@@ -23,6 +23,124 @@
   --letraCuerpo: #7d7d7e;
   --tituloCardsNegro: #282828;
   --footerBg: #070707;
+<<<<<<< HEAD
+=======
+}
+#gamer {
+  padding: 1em;
+}
+
+/* Header text and paragraph */
+.header-info-players > div h2 {
+  line-height: 1;
+  font-size: 2.7rem;
+}
+.header-info-players h2:nth-of-type(1) {
+  padding-top: 0.1em;
+}
+.header-info-players h2:nth-of-type(2) {
+  color: #ffc311;
+}
+#gamer p {
+  line-height: 1.4;
+  color: #7d7d7e;
+  font-family: "Poppins Web", sans-serif;
+  font-weight: 200;
+  font-size: 0.9rem;
+  padding-top: 0.9em;
+}
+
+/* Images container */
+.player-container {
+  padding-top: 1.8em;
+  justify-content: space-between;
+  gap: 20px;
+}
+div .image {
+  position: relative;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+.image-box {
+  position: relative;
+  width: 100%;
+
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 0.3);
+}
+.player-container > div {
+  position: relative;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+/* Button over image and flex for icon */
+.name-bottom,
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.name-bottom button {
+  font-family: "Titillium Web", sans-serif;
+  background-color: #ffc311;
+  border: none;
+  color: black;
+  padding: 14px;
+  width: 50vw;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  position: absolute;
+  top: 74%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+  cursor: zoom-in;
+  align-items: center;
+}
+
+.hvr-sink:hover,
+.hvr-sink:focus,
+.hvr-sink:active {
+  -webkit-transform: translateY(8px);
+  transform: translateY(8px);
+}
+
+/* Hover icon */
+
+.overlay {
+  top: -100%;
+  height: 100%;
+  width: 100%;
+  transition: 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+a.icon {
+  color: white;
+  font-size: 50px;
+  text-align: center;
+}
+
+.icon:hover {
+  color: #ffc311;
+}
+.image-box:hover .overlay {
+  top: 0;
+}
+.image-box:hover button {
+  opacity: 0;
+  top: 100%;
+  height: -100%;
+  width: 70%;
+  transition: 0.3s;
+>>>>>>> origin/feature_Cococod3
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -167,6 +285,7 @@
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+<<<<<<< HEAD
   body {
     width: 100%;
     height: 100%;
@@ -241,11 +360,21 @@
   .links button {
     padding: 1em 3.8em 1em 3.8em;
     background-color: transparent;
+=======
+  .player-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.9em;
+  }
+  .player-container button {
+    width: 20vw;
+>>>>>>> origin/feature_Cococod3
   }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+<<<<<<< HEAD
   body {
     width: 100%;
     height: 100%;
@@ -348,11 +477,52 @@
     color: var(--yellow);
   }
 }
+=======
+  .player-container {
+    display: flex;
+    justify-content: space-around;
+  }
+>>>>>>> origin/feature_Cococod3
 
+  .player-container button {
+    width: 20vw;
+  }
+}
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+  /* Code here */
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
+  #gamer {
+    max-width: 100%;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Titillium Web", sans-serif;
+}
+h1 {
+  font-size: 3.5rem;
+}
+h2 {
+  font-size: 2.25rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.1rem;
+}
+h5 {
+  font-size: 0.9rem;
+}
+h6 {
+  font-size: 0.7rem;
 }
