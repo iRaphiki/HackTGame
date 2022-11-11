@@ -1,349 +1,426 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HackTGame</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <script
-      src="https://kit.fontawesome.com/d5e3a4bc3e.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E" />
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&family=Titillium+Web:wght@900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- MODAL  -->
-    <div id="login-box">
-      <div class="modal-content">
-        <div class="modal-header">
-          <div id="close-modal" class="close" title="Close Modal">X</div>
-          <h2>LOGIN</h2>
-        </div>
-        <div class="modal-main">
-          <form action="modal-login" method="post">
-            <input
-              type="text"
-              placeholder="Username"
-              name="user-name"
-              required
-            />
-            <input
-              type="password"
-              placeholder="Password"
-              name="password"
-              required
-            />
-            <label>
-              <input type="checkbox" checked="checked" name="remember" />
-              Remember Me
-            </label>
-            <button id="btn-signin" type="submit">SIGN IN</button>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <a href="#">Lost Password?</a>
-          <a href="#">Create an Account</a>
-        </div>
-      </div>
-    </div>
-    <div id="signup-box">
-      <div class="modal-content">
-        <div class="modal-header">
-          <div id="close-sign" class="close" title="Close Modal">X</div>
-          <h2>SIGN UP</h2>
-        </div>
-        <div class="modal-main">
-          <p>New membership are not allowed</p>
-        </div>
-      </div>
-    </div>
-    <!-- Menu emergente -->
-    <div id="container" class="alert dismissible">
-      <div class="menu_container open">
-        <button class="btn__close">X</button>
-          <div>
-            <p class="login_a">Home</p>
-            <p class="login_a">About</p>
-            <p class="login_a">Games</p>
-            <p class="login_a">eSport</p>
-            <p class="login_a">Contact</p>
-          </div>
-          <div class="icons_div">
-            <i class="icons_login fa-brands fa-twitter"></i>
-            <i class="icons_login fa-brands fa-twitch"></i>
-            <i class="icons_login fa-brands fa-facebook-f"></i>
-            <i class="icons_login fa-brands fa-instagram"></i>
-            <i class="icons_login fa-brands fa-youtube"></i>
-          </div>
-          <div class="botones_div">
-            <button class="login">LOGIN</button>
-            <button class="signUp">SIGN UP</button>
-          </div>
-      </div>
-    </div><!--  -->
-    <header>
-      <nav id="navbar">
-        <div class="title">
-          <h1 class="white">Hack</h1>
-          <h1 class="yellow">TGame</h1>
-        </div>
-        <div class="banner">
-          <div class="hamburger">
-            <span class="fa-stack fa-2x">
-              <i class="fa-solid fa-square fa-stack-2x"></i>
-              <i class="fa-solid fa-bars fa-stack-1x fa-inverse"></i>
-            </span>
-          </div>
-        </div>
-        <div class="mix">
-          <div class="icons">
-            <i class="fa-brands fa-twitter fa-lg"></i>
-            <i class="fa-brands fa-facebook fa-lg"></i>
-            <i class="fa-brands fa-twitch fa-lg"></i>
-            <i class="fa-brands fa-instagram fa-lg"></i>
-            <i class="fa-brands fa-youtube fa-lg"></i>
-          </div>
-          <div class="buttons">
-            <button id="login" class="login">LOGIN</button>
-            <button id="signup" class="signup">SIGN UP</button>
-          </div>
-        </div>
-        <div class="links">
-          <button>Home</button>
-          <button>About</button>
-          <button>Game</button>
-          <button>eSport</button>
-          <button>Contact</button>
-        </div>
-        <!-- Prueba de archivo desplegable -->
-         <div class="alert dismissible">
-			<button class="btn__close">X</button>
-			  <div>
-				<p class="login_p border-x">Home</p>
-				<p class="login_p">About</p>
-				<p class="login_p">Games</p>
-				<p class="login_p">eSport</p>
-				<p class="login_p">Contact</p>
-			  </div>
-			  <div>
-				<i class="icons_login fa-brands fa-twitter"></i>
-				<i class="icons_login fa-brands fa-twitch"></i>
-				<i class="icons_login fa-brands fa-facebook-f"></i>
-				<i class="icons_login fa-brands fa-instagram"></i>
-				<i class="icons_login fa-brands fa-youtube"></i>
-			  </div>
-			  <div class="botones_div">
-				<button class="login">LOGIN</button>
-				<button class="signUp">SIGN UP</button>
-			  </div>
-		  </div> 
-      </nav>
-      <div id="slider"></div>
-    </header>
-    <main>
-      <section id="gamer">
-        <!-- Header players -->
-        <div class="header-info-players">
-          <!-- <h1 class="our-team">Our Team <span>& Players</span></h1> -->
-          <div class="header-text-players">
-            <h2 class="our-team">Our Team</h2>
-            <h2 class="and-players">& Players</h2>
-          </div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum architecto deserunt, ducimus ullam quaerat error eum earum pariatur facilis assumenda voluptates dolorum ratione, et alias recusandae enim unde non iure aliquid accusantium corporis eius necessitatibus nesciunt. Totam qui sed eligendi.
-          </p>
-        </div>
-        <div class="player-container">
-          <div id="player1">
-            <div class="image-box">
-              <img
-                src="img/players/player-1.jpg"
-                alt="Avatar"
-                class="image"
-                id="p1img"
-              />
-              <div class="name-bottom">
-                <button>MASTERG</button>
-              </div>
-              <div class="overlay">
-                <a href="#" class="icon" title="User Profile">
-                  <i class="fa-solid fa-circle-plus"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div id="player2">
-            <div class="image-box">
-              <img
-                src="img/players/player-2.jpg"
-                alt="Avatar"
-                class="image"
-                id="p2img"
-              />
-              <div class="name-bottom">
-                <button>W-QUEEN</button>
-              </div>
-              <div class="overlay">
-                <a href="#" class="icon" title="User Profile">
-                  <i class="fa-solid fa-circle-plus"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div id="player3">
-            <div class="image-box">
-              <img
-                src="img/players/player-3.jpg"
-                alt="Avatar"
-                class="image"
-                id="p3img"
-              />
-              <div class="name-bottom">
-                <button>WIZARD</button>
-              </div>
-              <div class="overlay">
-                <a href="#" class="icon" title="User Profile">
-                  <i class="fa-solid fa-circle-plus"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- CARDS  -->
-      <section id="card">
-        <div class="our-games">
-          <h2>Our <span>Games</span></h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-            repudiandae rerum laborum doloremque animi nostrum totam eius
-            excepturi voluptatum ut quisquam, accusamus eligendi repellat autem
-            obcaecati a vero. Ut facere, totam amet alias repellat fuga!
-          </p>
-          <div class="all-cards">
-            <div class="card-individual">
-              <img
-                src="./img/games/game-1.png"
-                class="card-img-top"
-                alt="memory-cards-game"
-              />
-              <div class="card-body">
-                <h4>MEMORY CARDS</h4>
-                <i class="fa-solid fa-desktop fa-lg"></i>
-                <a href="#">STEAM</a>
-                <a href="#">XBOX ONE</a>
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Dolore, est.
-                </p>
-              </div>
-            </div>
-            <div class="card-individual">
-              <img
-                src="./img/games/game-2.jpg"
-                class="card-img-top"
-                alt="space-invaders-game"
-              />
-              <div class="card-body">
-                <h4>SPACE INVADERS</h4>
-                <i class="fa-solid fa-desktop fa-lg"></i>
-                <a href="#">ORIGIN</a>
-                <a href="#">PLAY STATION 4</a>
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Dolore, est.
-                </p>
-              </div>
-            </div>
-            <div class="card-individual">
-              <img
-                src="./img/games/coming-soon.jpg"
-                class="card-img-top"
-                alt="your-next-game"
-              />
-              <div class="card-body">
-                <h4>YOUR NEXT GAME</h4>
-                <i class="fa-solid fa-desktop fa-lg"></i>
-                <a href="#">STEAM</a>
-                <a href="#">UPLAY</a>
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Dolore, est.
-                </p>
-              </div>
-            </div>
-            <div class="card-individual">
-              <img
-                src="./img/games/coming-soon.jpg"
-                class="card-img-top"
-                alt="your-next-game"
-              />
-              <div class="card-body">
-                <h4>YOUR NEXT GAME</h4>
-                <i class="fa-solid fa-desktop fa-lg"></i>
-                <a href="#">STEAM</a>
-                <a href="#">UPLAY</a>
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Dolore, est.
-                </p>
-              </div>
-            </div>
-            <div class="card-individual">
-              <img
-                src="./img/games/coming-soon.jpg"
-                class="card-img-top"
-                alt="your-next-game"
-              />
-              <div class="card-body">
-                <h4>YOUR NEXT GAME</h4>
-                <i class="fa-solid fa-desktop fa-lg"></i>
-                <a href="#">STEAM</a>
-                <a href="#">UPLAY</a>
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Dolore, est.
-                </p>
-              </div>
-            </div>
-            <div class="card-individual">
-              <img
-                src="./img/games/coming-soon.jpg"
-                class="card-img-top"
-                alt="your-next-game"
-              />
-              <div class="card-body">
-                <h4>YOUR NEXT GAME</h4>
-                <i class="fa-solid fa-desktop fa-lg"></i>
-                <a href="#">STEAM</a>
-                <a href="#">UPLAY</a>
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Dolore, est.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-     <!-- Footer-->
-     <footer>
-      <div class="footer">
-        <h3 class="footer_h3">Hack<span class="span">Tgame</span></h3>
-        <p>
-          Made with <i class="fa-solid fa-heart"></i> by
-          <span class="span"><u>CODE SPACE Team</u></span>
-        </p>
-      </div>
-    </footer> 
-  </body>
-  <script src="assets/js/app.js"></script>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>HackTGame</title>
+		<link
+			rel="stylesheet"
+			href="assets/css/style.css" />
+		<script
+			src="https://kit.fontawesome.com/d5e3a4bc3e.js"
+			crossorigin="anonymous"></script>
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com/%22%3E" />
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com/"
+			crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&family=Titillium+Web:wght@900&display=swap"
+			rel="stylesheet" />
+	</head>
+	<body>
+		<!-- MODAL  -->
+		<div id="login-box">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div
+						id="close-modal"
+						class="close"
+						title="Close Modal">
+						X
+					</div>
+					<h2>LOGIN</h2>
+				</div>
+				<div class="modal-main">
+					<form
+						action="modal-login"
+						method="post">
+						<input
+							type="text"
+							placeholder="Username"
+							name="user-name"
+							required />
+						<input
+							type="password"
+							placeholder="Password"
+							name="password"
+							required />
+						<label>
+							<input
+								type="checkbox"
+								checked="checked"
+								name="remember" />
+							Remember Me
+						</label>
+						<button
+							id="btn-signin"
+							type="submit">
+							SIGN IN
+						</button>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<a href="#">Lost Password?</a>
+					<a href="#">Create an Account</a>
+				</div>
+			</div>
+		</div>
+		<div id="signup-box">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div
+						id="close-sign"
+						class="close"
+						title="Close Modal">
+						X
+					</div>
+					<h2>SIGN UP</h2>
+				</div>
+				<div class="modal-main">
+					<p>New membership are not allowed</p>
+				</div>
+			</div>
+		</div>
+		<!-- Menu emergente -->
+		<div
+			id="container"
+			class="alert dismissible">
+			<div class="menu_container open">
+				<button class="btn__close">X</button>
+				<div>
+					<p class="login_a">Home</p>
+					<p class="login_a">About</p>
+					<p class="login_a">Games</p>
+					<p class="login_a">eSport</p>
+					<p class="login_a">Contact</p>
+				</div>
+				<div class="icons_div">
+					<i class="icons_login fa-brands fa-twitter"></i>
+					<i class="icons_login fa-brands fa-twitch"></i>
+					<i class="icons_login fa-brands fa-facebook-f"></i>
+					<i class="icons_login fa-brands fa-instagram"></i>
+					<i class="icons_login fa-brands fa-youtube"></i>
+				</div>
+				<div class="botones_div">
+					<button class="login">LOGIN</button>
+					<button class="signUp">SIGN UP</button>
+				</div>
+			</div>
+		</div>
+		<!-- Header  -->
+		<header>
+			<nav id="navbar">
+				<div class="banner">
+					<div class="title">
+						<h1>Hack<span>TGame</span></h1>
+					</div>
+					<div class="hamburger">
+						<span class="fa-stack fa-2x">
+							<i class="fa-solid fa-square fa-stack-2x"></i>
+							<i class="fa-solid fa-bars fa-stack-1x fa-inverse"></i>
+						</span>
+					</div>
+				</div>
+				<div class="mix">
+					<div class="icons">
+						<i class="fa-brands fa-twitter fa-lg"></i>
+						<i class="fa-brands fa-facebook fa-lg"></i>
+						<i class="fa-brands fa-twitch fa-lg"></i>
+						<i class="fa-brands fa-instagram fa-lg"></i>
+						<i class="fa-brands fa-youtube fa-lg"></i>
+					</div>
+					<div class="buttons">
+						<button
+							id="login"
+							class="login">
+							LOGIN
+						</button>
+						<button
+							id="signup"
+							class="signup">
+							SIGN UP
+						</button>
+					</div>
+				</div>
+				<div class="links">
+					<button>Home</button>
+					<button>About</button>
+					<button>Game</button>
+					<button>eSport</button>
+					<button>Contact</button>
+				</div>
+				<!-- Prueba de archivo desplegable -->
+				<div class="alert dismissible">
+					<button class="btn__close">X</button>
+					<div>
+						<p class="login_p border-x">Home</p>
+						<p class="login_p">About</p>
+						<p class="login_p">Games</p>
+						<p class="login_p">eSport</p>
+						<p class="login_p">Contact</p>
+					</div>
+					<div>
+						<i class="icons_login fa-brands fa-twitter"></i>
+						<i class="icons_login fa-brands fa-twitch"></i>
+						<i class="icons_login fa-brands fa-facebook-f"></i>
+						<i class="icons_login fa-brands fa-instagram"></i>
+						<i class="icons_login fa-brands fa-youtube"></i>
+					</div>
+					<div class="botones_div">
+						<button class="login">LOGIN</button>
+						<button class="signUp">SIGN UP</button>
+					</div>
+				</div>
+			</nav>
+			<div id="slider">
+				<div class="image-container">
+					<img
+						src="img/slider/1.jpg"
+						class="slide active" />
+					<img
+						src="img/slider/2.jpg"
+						class="slide" />
+					<img
+						src="img/slider/3.jpg"
+						class="slide" />
+					<img
+						src="img/slider/4.jpg"
+						class="slide" />
+					<img
+						src="img/slider/5.jpg"
+						class="slide" />
+					<img
+						src="img/slider/6.jpg"
+						class="slide" />
+				</div>
+				<div class="centered-text">
+					<div id="centered-title">
+						<h2>WE LOVE <span id="colored-title">GAMES!</span></h2>
+					</div>
+					<div id="centered-paragraph">
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+							corporis eius ab animi ducimus itaque ratione aspernatur incidunt,
+							quae error.
+						</p>
+					</div>
+				</div>
+				<div class="sliderButtons">
+					<button id="circle1">&nbsp;</button>
+					<button id="circle2">&nbsp;</button>
+					<button id="circle3">&nbsp;</button>
+					<button id="circle4">&nbsp;</button>
+					<button id="circle5">&nbsp;</button>
+					<button id="circle6">&nbsp;</button>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section id="teams">
+				<!-- Header players -->
+				<div class="our-team">
+					<h2>Our Team</h2>
+					<h2>& Players</h2>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+						architecto deserunt, ducimus ullam quaerat error eum earum pariatur
+						facilis assumenda voluptates dolorum ratione, et alias recusandae
+						enim unde non iure aliquid accusantium corporis eius necessitatibus
+						nesciunt. Totam qui sed eligendi.
+					</p>
+				</div>
+				<div class="player-container">
+					<div id="player1">
+						<div class="image-box">
+							<img
+								src="img/players/player-1.jpg"
+								alt="Avatar"
+								class="image"
+								id="p1img" />
+							<div class="name-bottom">
+								<button>MASTERG</button>
+							</div>
+							<div class="overlay">
+								<a
+									href="#"
+									class="icon"
+									title="User Profile">
+									<i class="fa-solid fa-circle-plus"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div id="player2">
+						<div class="image-box">
+							<img
+								src="img/players/player-2.jpg"
+								alt="Avatar"
+								class="image"
+								id="p2img" />
+							<div class="name-bottom">
+								<button>W-QUEEN</button>
+							</div>
+							<div class="overlay">
+								<a
+									href="#"
+									class="icon"
+									title="User Profile">
+									<i class="fa-solid fa-circle-plus"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div id="player3">
+						<div class="image-box">
+							<img
+								src="img/players/player-3.jpg"
+								alt="Avatar"
+								class="image"
+								id="p3img" />
+							<div class="name-bottom">
+								<button>WIZARD</button>
+							</div>
+							<div class="overlay">
+								<a
+									href="#"
+									class="icon"
+									title="User Profile">
+									<i class="fa-solid fa-circle-plus"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- CARDS  -->
+			<section id="card">
+				<div class="our-games">
+					<h2>Our <span>Games</span></h2>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+						repudiandae rerum laborum doloremque animi nostrum totam eius
+						excepturi voluptatum ut quisquam, accusamus eligendi repellat autem
+						obcaecati a vero.
+					</p>
+					<div class="all-cards">
+						<div class="card-individual">
+							<img
+								src="./img/games/game-1.png"
+								class="card-img-top"
+								alt="memory-cards-game" />
+							<div class="card-body">
+								<h4>MEMORY CARDS</h4>
+								<i class="fa-solid fa-desktop fa-lg"></i>
+								<a href="#">STEAM</a>
+								<a href="#">XBOX ONE</a>
+								<p class="card-text">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Dolore, est.
+								</p>
+							</div>
+						</div>
+						<div class="card-individual">
+							<img
+								src="./img/games/game-2.jpg"
+								class="card-img-top"
+								alt="space-invaders-game" />
+							<div class="card-body">
+								<h4>SPACE INVADERS</h4>
+								<i class="fa-solid fa-desktop fa-lg"></i>
+								<a href="#">ORIGIN</a>
+								<a href="#">PLAY STATION 4</a>
+								<p class="card-text">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Dolore, est.
+								</p>
+							</div>
+						</div>
+						<div class="card-individual">
+							<img
+								src="./img/games/coming-soon.jpg"
+								class="card-img-top"
+								alt="your-next-game" />
+							<div class="card-body">
+								<h4>YOUR NEXT GAME</h4>
+								<i class="fa-solid fa-desktop fa-lg"></i>
+								<a href="#">STEAM</a>
+								<a href="#">UPLAY</a>
+								<p class="card-text">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Dolore, est.
+								</p>
+							</div>
+						</div>
+						<div class="card-individual">
+							<img
+								src="./img/games/coming-soon.jpg"
+								class="card-img-top"
+								alt="your-next-game" />
+							<div class="card-body">
+								<h4>YOUR NEXT GAME</h4>
+								<i class="fa-solid fa-desktop fa-lg"></i>
+								<a href="#">STEAM</a>
+								<a href="#">UPLAY</a>
+								<p class="card-text">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Dolore, est.
+								</p>
+							</div>
+						</div>
+						<div class="card-individual">
+							<img
+								src="./img/games/coming-soon.jpg"
+								class="card-img-top"
+								alt="your-next-game" />
+							<div class="card-body">
+								<h4>YOUR NEXT GAME</h4>
+								<i class="fa-solid fa-desktop fa-lg"></i>
+								<a href="#">STEAM</a>
+								<a href="#">UPLAY</a>
+								<p class="card-text">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Dolore, est.
+								</p>
+							</div>
+						</div>
+						<div class="card-individual">
+							<img
+								src="./img/games/coming-soon.jpg"
+								class="card-img-top"
+								alt="your-next-game" />
+							<div class="card-body">
+								<h4>YOUR NEXT GAME</h4>
+								<i class="fa-solid fa-desktop fa-lg"></i>
+								<a href="#">STEAM</a>
+								<a href="#">UPLAY</a>
+								<p class="card-text">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Dolore, est.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<!-- Footer-->
+		<footer>
+			<div class="footer">
+				<h3 class="footer_h3">Hack<span class="span">Tgame</span></h3>
+				<p>
+					Made with <i class="fa-solid fa-heart"></i> by
+					<span class="span"><u>CODE SPACE Team</u></span>
+				</p>
+			</div>
+		</footer>
+	</body>
+	<script src="assets/js/app.js"></script>
 </html>
-    

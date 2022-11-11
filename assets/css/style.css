@@ -1,774 +1,742 @@
 *,
 ::before,
 ::after {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  box-sizing: border-box;
-  outline: 0 none;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	outline: 0 none;
 }
 :root {
-  --black: #000;
-  --white: #fff;
-  --yellow: #ffc311;
-  --letraCuerpo: #7d7d7e;
-  --tituloCardsNegro: #282828;
-  --footerBg: #070707;
-  
+	--black: #000;
+	--white: #fff;
+	--yellow: #ffc311;
+	--letraCuerpo: #7d7d7e;
+	--tituloCardsNegro: #282828;
+	--footerBg: #070707;
+	width: 100vw;
+	height: 100vh;
 }
-
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
-  font-family: "Titillium Web", sans-serif;
-}
-h1 {
-  font-size: 3.5rem;
+h4 {
+	font-family: 'Titillium Web', sans-serif;
 }
 h2 {
-  font-size: 2.25rem;
+	font-size: 2.7rem;
 }
 h3 {
-  font-size: 1.5rem;
+	font-size: 1.5rem;
 }
 h4 {
-  font-size: 1.1rem;
+	font-size: 1.1rem;
 }
-h5 {
-  font-size: 0.9rem;
+/* Menú desplegable*/
+.menu_container {
+	display: none;
+	background-color: var(--footerBg);
 }
-h6 {
-  font-size: 0.7rem;
+.menu_container.open {
+	display: block;
 }
-
-/* GAMERS-CARDS */
-#gamer {
-  padding: 1em;
+.btn__close {
+	background-color: var(--lightBlack);
+	color: var(--white);
+	font-size: 2em;
+	font-weight: bolder;
+	position: absolute;
+	right: 1.5em;
+	top: 20px;
+	z-index: 5;
 }
-
-/* Header text and paragraph */
-.header-info-players > div h2 {
-  line-height: 1;
-  font-size: 2.7rem;
-}
-.header-info-players h2:nth-of-type(1) {
-  padding-top: 0.1em;
-}
-.header-info-players h2:nth-of-type(2) {
-  color: #ffc311;
-}
-#gamer p {
-  line-height: 1.4;
-  color: #7d7d7e;
-  font-family: "Poppins Web", sans-serif;
-  font-weight: 200;
-  font-size: 0.9rem;
-  padding-top: 0.9em;
+.btn__close:hover {
+	cursor: pointer;
+	color: var(--yellow);
 }
 
-/* Images container */
-.player-container {
-  padding-top: 1.8em;
-  justify-content: space-between;
-  gap: 20px;
+.icons_login {
+	color: var(--white);
+	font-size: 20px;
 }
-div .image {
-  position: relative;
-  width: 100%;
-  object-fit: cover;
-  display: block;
+.icons_login:hover {
+	color: var(--yellow);
 }
-.image-box {
-  position: relative;
-  width: 100%;
-
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgb(0 0 0 / 0.3);
+.icons_div {
+	display: inline-flex;
+	width: 100%;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 50px;
 }
-.player-container > div {
-  position: relative;
-  text-align: center;
-  padding-bottom: 2rem;
+.botones_div {
+	display: inline-flex;
+	width: 100%;
 }
-/* Button over image and flex for icon */
-.name-bottom,
-.overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#container {
+	width: 85%;
+	float: right;
+	height: 100vh;
+	background-color: var(--lightBlack);
+	position: absolute;
 }
-.name-bottom button {
-  font-family: "Titillium Web", sans-serif;
-  background-color: #ffc311;
-  border: none;
-  color: black;
-  padding: 14px;
-  width: 50vw;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1rem;
-  position: absolute;
-  top: 74%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 9;
-  cursor: zoom-in;
-  align-items: center;
+#container > div {
+	padding: 1em;
+	align-items: center;
 }
-
-.hvr-sink:hover,
-.hvr-sink:focus,
-.hvr-sink:active {
-  -webkit-transform: translateY(8px);
-  transform: translateY(8px);
+/* Prueba de archivo desplegable  */
+.dismissible {
+	opacity: 0 !important;
+	height: 0 !important;
+	padding: 0 !important;
+	transition: all 0.3s linear;
+	display: none;
+	z-index: 30;
 }
-
-/* Hover icon */
-
-.overlay {
-  top: -100%;
-  height: 100%;
-  width: 100%;
-  transition: 0.3s ease;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-a.icon {
-  color: white;
-  font-size: 50px;
-  text-align: center;
-}
-
-.icon:hover {
-  color: #ffc311;
-}
-.image-box:hover .overlay {
-  top: 0;
-}
-.image-box:hover button {
-  opacity: 0;
-  top: 100%;
-  height: -100%;
-  width: 70%;
-  transition: 0.3s;
-
-}
-
 /* MODALS */
 #login-box,
 #signup-box {
-  width: 100%;
-  height: 100vh;
-  display: none;
-  position: absolute;
-  background-color: white;
-  z-index: 10;
+	width: 100%;
+	height: 100vh;
+	display: none;
+	position: absolute;
+	background-color: white;
+	z-index: 10;
 }
 .modal-content {
-  padding: 2em;
-  /* background-color: darkolivegreen; */
-  display: flex;
-  flex-wrap: wrap;
+	padding: 2em;
+	/* background-color: darkolivegreen; */
+	display: flex;
+	flex-wrap: wrap;
 }
 .modal-header,
 .modal-main,
 .modal-footer {
-  width: 100%;
+	width: 100%;
 }
 .modal-header h2 {
-  font-family: "Titillium web", sans-serif;
-  font-size: 2.7rem;
-  text-align: center;
-  margin-bottom: 0.5em;
+	font-family: 'Titillium web', sans-serif;
+	text-align: center;
+	margin-bottom: 0.5em;
 }
 .modal-header .close {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Poppins", sans-serif;
-  background-color: var(--tituloCardsNegro);
-  color: white;
-  font-size: 1.5rem;
-  text-align: center;
-  width: 60px;
-  height: 60px;
-  position: absolute;
-  top: 0;
-  right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Poppins', sans-serif;
+	background-color: var(--tituloCardsNegro);
+	color: white;
+	font-size: 1.5rem;
+	text-align: center;
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	top: 0;
+	right: 0;
 }
 .modal-header .close:hover,
 .modal-header .close:focus {
-  color: black;
-  background-color: var(--yellow);
+	color: black;
+	background-color: var(--yellow);
 }
 #login-box .modal-main form input {
-  font-family: "Poppins", sans-serif;
-  color: var(--letraCuerpo);
-  width: 100%;
-  border: 1px solid var(--letraCuerpo);
-  margin: 1em 0;
-  padding: 1em;
-  font-size: 1rem;
+	font-family: 'Poppins', sans-serif;
+	color: var(--letraCuerpo);
+	width: 100%;
+	border: 1px solid var(--letraCuerpo);
+	margin: 1em 0;
+	padding: 1em;
+	font-size: 1rem;
 }
-#login-box .modal-main form input[type="checkbox"] {
-  width: auto;
-  margin-right: 0.5em;
+#login-box .modal-main form input[type='checkbox'] {
+	width: auto;
+	margin-right: 0.5em;
 }
 #login-box label {
-  color: var(--letraCuerpo);
-  font-family: "Poppins", sans-serif;
+	color: var(--letraCuerpo);
+	font-family: 'Poppins', sans-serif;
 }
 #login-box button {
-  display: block;
-  background-color: var(--yellow);
-  color: white;
-  font-size: 1rem;
-  padding: 1rem 2rem;
-  margin: 1em 0;
+	display: block;
+	background-color: var(--yellow);
+	color: white;
+	font-size: 1rem;
+	padding: 1rem 2rem;
+	margin: 1em 0;
 }
 #login-box .modal-footer {
-  display: flex;
-  justify-content: space-between;
-  margin: 1.5em 0;
+	display: flex;
+	justify-content: space-between;
+	margin: 1.5em 0;
 }
 #login-box a {
-  color: black;
-  text-decoration: none;
-  font-family: "Poppins", sans-serif;
+	color: black;
+	text-decoration: none;
+	font-family: 'Poppins', sans-serif;
 }
 #login-box a:last-of-type {
-  color: var(--letraCuerpo);
+	color: var(--letraCuerpo);
 }
 #signup-box .modal-main {
-  font-family: "Poppins", sans-serif;
-  color: var(--letraCuerpo);
-  text-align: center;
+	font-family: 'Poppins', sans-serif;
+	color: var(--letraCuerpo);
+	text-align: center;
+}
+/* HEADER  */
+
+/* NAVBAR */
+#navbar {
+	position: fixed;
+	width: 100%;
+	z-index: 999999 !important;
+}
+#navbar > .banner {
+	width: 100%;
+	height: 5em;
+	background-color: var(--white);
+	display: flex;
+	justify-content: space-between;
+	align-content: space-around;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 0 1.375em;
+}
+.title {
+	font-weight: bold;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 1.2rem;
+}
+#navbar > .banner > .title > h1 > span {
+	color: var(--yellow);
+}
+.hamburger {
+	display: flex;
+	justify-content: right;
+	align-items: flex-start;
+	font-size: small;
+	background-color: black;
+	width: 4em;
+	border-radius: 5px;
+}
+.buttons {
+	display: none;
+	justify-content: right;
+	align-items: flex-start;
 }
 
+#navbar > button {
+	background-color: var(--yellow);
+	color: white;
+	padding: 1em 2.5em 1em 2.5em;
+	font-weight: bold;
+}
+.login {
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
+}
+.signup {
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+}
+.icons {
+	display: none;
+}
+.links {
+	display: none;
+}
+/* Slider show */
+.slider {
+	text-align: center;
+	overflow: hidden;
+	z-index: 20;
+	padding-top: 5em;
+}
+.image-container {
+	display: flex;
+	flex-direction: row;
+	height: 100vh;
+	position: relative;
+	-moz-transition: left 2s ease;
+	-o-transition: left 2s ease;
+	transition: left 2s ease;
+	margin-top: 5em;
+}
+.slide {
+	position: absolute;
+	top: 0px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	transition: all 0.3s linear;
+	opacity: 0;
 
-/* CARTAS  */
-/* MOBILE FIRST  */
-#card h2 {
-  font-size: 3.5rem;
-  font-family: "Titillium web", sans-serif;
+	/* z-index: 20; */
 }
-#card h4 {
-  font-family: "Titillium web", sans-serif;
-  font-size: 2rem;
-  color: var(--tituloCardsNegro);
+.active {
+	opacity: 1;
 }
-#card p {
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
+
+@keyframes fader {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
 }
-#card .our-games {
-  padding: 2rem;
+/* left: 40.5vw; */
+.sliderButtons {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	padding: 0 1em;
 }
-#card .our-games h2 span {
-  color: var(--yellow);
+.sliderButtons > button {
+	height: 25px;
+	width: 25px;
+	border-radius: 50px;
+	border: 3px solid white;
+	margin: 0 1rem;
+	background-color: transparent;
+	transition: all 0.3s linear;
+	margin-top: -4em;
+	z-index: 1000;
+}
+.centered-text {
+	color: white;
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -2%);
+}
+#centered-title > h2 {
+	text-align: center;
+	text-shadow: 1px 1px 2px black;
+}
+.centered-text > div:nth-child(2) {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 200;
+	font-size: 1.375rem;
+	text-align: center;
+	padding: 0 0.6em;
+}
+.centered-text #colored-title {
+	color: #ffc311;
+}
+
+/* TEAMS SECTION */
+#teams {
+	padding: 1em;
+}
+/* Header text and paragraph */
+.our-team > h2 {
+	line-height: 1;
+}
+.our-team > h2:nth-of-type(2) {
+	color: #ffc311;
+}
+main > section > div > p {
+	line-height: 1.4;
+	color: #7d7d7e;
+	font-family: 'Poppins Web', sans-serif;
+	font-weight: 200;
+	font-size: 0.9rem;
+	padding-top: 0.9em;
+}
+/* Images container */
+.player-container {
+	padding-top: 1.8em;
+	justify-content: space-between;
+	gap: 20px;
+}
+div .image {
+	position: relative;
+	width: 100%;
+	object-fit: cover;
+	display: block;
+}
+.image-box {
+	position: relative;
+	width: 100%;
+
+	overflow: hidden;
+	box-shadow: 0 4px 10px rgb(0 0 0 / 0.3);
+}
+.player-container > div {
+	position: relative;
+	text-align: center;
+	padding-bottom: 2rem;
+}
+/* Button over image and flex for icon */
+.name-bottom,
+.overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.name-bottom button {
+	font-family: 'Titillium Web', sans-serif;
+	background-color: #ffc311;
+	border: none;
+	color: black;
+	padding: 14px;
+	width: 50vw;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 1rem;
+	position: absolute;
+	top: 74%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 9;
+	cursor: zoom-in;
+	align-items: center;
+}
+.hvr-sink:hover,
+.hvr-sink:focus,
+.hvr-sink:active {
+	-webkit-transform: translateY(8px);
+	transform: translateY(8px);
+}
+/* Hover icon */
+.overlay {
+	top: -100%;
+	height: 100%;
+	width: 100%;
+	transition: 0.3s ease;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+a.icon {
+	color: white;
+	font-size: 50px;
+	text-align: center;
+}
+.icon:hover {
+	color: #ffc311;
+}
+.image-box:hover .overlay {
+	top: 0;
+}
+.image-box:hover button {
+	opacity: 0;
+	top: 100%;
+	height: -100%;
+	width: 70%;
+	transition: 0.3s;
 }
 /* CARDS */
+#card h4 {
+	color: var(--tituloCardsNegro);
+}
+#card p {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 200;
+}
+#card .our-games {
+	padding: 0em 1rem;
+}
+#card .our-games h2 span {
+	color: var(--yellow);
+}
+/* EACH CARDS */
 #card .card-individual {
-  margin: 2.5rem 0;
-  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.38);
-  -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.38);
-  -moz-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.38);
+	margin: 2.5rem 0;
+	box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.38);
+	-webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.38);
+	-moz-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.38);
 }
 /* CARD BODY  */
 #card .card-body {
-  padding: 1rem;
+	padding: 1rem;
 }
 #card .card-body h4:hover,
 #card .card-body a:hover {
-  color: var(--yellow);
+	color: var(--yellow);
 }
 /*  CARD IMG  */
 #card .card-img-top {
-  object-fit: contain;
-  object-position: center;
-  width: 100%;
+	object-fit: contain;
+	object-position: center;
+	width: 100%;
 }
 /* CARD ICON & ANCHOR  */
 #card i.fa-desktop {
-  margin: 1rem 0 1.5rem;
+	margin: 1rem 0 1.5rem;
 }
 #card .card-body a {
-  font-family: "Poppins", sans-serif;
-  color: grey;
-  text-decoration: none;
-  margin-left: 0.3rem;
+	font-family: 'Poppins', sans-serif;
+	color: grey;
+	text-decoration: none;
+	margin-left: 0.3rem;
 }
 #card .card-body a:hover {
-  color: var(--yellow);
-
+	color: var(--yellow);
 }
-/* Starting Footer */
+/* FOOTER */
 .footer_h3 {
-  color: white;
-  text-align: center;
-  font-family: "Titillium Web", sans-serif;
-  font-size: 1.5rem;
-  padding-top: 10px;
+	color: white;
+	text-align: center;
+	font-family: 'Titillium Web', sans-serif;
+	padding-top: 10px;
 }
 .footer {
-  color: white;
-  text-align: center;
-  font-family: "Poppins", sans-serif;
-  font-size: 1rem;
-  padding-bottom: 10px;
-  background-color: var(--footerBg);
-  width: 100%;
+	color: white;
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	font-size: 1rem;
+	padding-bottom: 10px;
+	background-color: var(--footerBg);
+	width: 100%;
 }
 .span {
-  color: var(--yellow);
-}
-/* Menú desplegable*/
-.menu_container {
-  display: none;
-  background-color: var(--footerBg);
-}
-.menu_container.open {
-  display: block;
-}
-
-/* .login_a {
-  padding-top: 48px;
-  color: white;
-  border-bottom: solid 1px var(--white);
-  font-family: "Poppins", sans-serif;
-  margin-bottom: 10px;
-  position: relative;
-  display: block;
-}
-.login_a:hover {
-  color: var(--yellow);
-  cursor: pointer;
-} */
-.btn__close {
-  background-color: var(--lightBlack);
-  color: var(--white);
-  font-size: 2em;
-  font-weight: bolder;
-  position: absolute;
-  right: 1.5em;
-  top: 20px;
-  z-index: 5;
-}
-.btn__close:hover {
-  cursor: pointer;
-  color: var(--yellow);
-}
-
-.icons_login {
-  color: var(--white);
-  font-size: 20px;
-}
-.icons_login:hover {
-  color: var(--yellow);
-}
-.icons_div {
-  display: inline-flex;
-  width: 100%;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 50px;
-}
-/* .login,
-.signUp {
-  width: 50%;
-  height: 2.2em;
-  /* margin-top: 30px; */
-  /*font-size: 1.2em;
-  font-weight: 525;
-  background-color: var(--yellow);
-  color: white;
-  /* box-shadow: 1px 1px 1px 1px var(--letraCuerpo); */
-/*}
-.login:hover,
-.signUp:hover {
-  color: var(--letraCuerpo);
-  cursor: pointer;
-} */
-.botones_div {
-  display: inline-flex;
-  width: 100%;
-}
-#container {
-  width: 85%;
-  float: right;
-  height: 100vh;
-  background-color: var(--lightBlack);
-  position: absolute;
-  
-}
-#container > div {
-  padding: 1em;
-  align-items: center;
-}
-/* Prueba de archivo desplegable  */
-.dismissible {
-  opacity: 0 !important;
-  height: 0 !important;
-  padding: 0 !important;
-  transition: all 0.3s linear;
-  display: none;
-  z-index: 30;
+	color: var(--yellow);
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-  body {
-    width: 100%;
-    height: 100%;
-   
-  }
-  #navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-
-  .title {
-    display: flex;
-    justify-content: left;
-    align-items: flex-start;
-    margin-top: 2em;
-    margin-left: 2em;
-    font-weight: bold;
-    font-family: "Titillium Web", sans-serif;
-  }
-  .banner {
-    width: 100%;
-    height: 100px;
-    background-color: var(--white);
-  }
-  header {
-    overflow: hidden;
-  }
-  header .title {
-    float: left;
-  }
-  header .hamburger {
-    float: right;
-    margin-top: 1em;
-  }
-  .white {
-    color: var(--black);
-  }
-  .yellow {
-    color: var(--yellow);
-  }
-  .hamburger {
-    display: flex;
-    justify-content: right;
-    align-items: flex-start;
-  }
-  header .hamburger .title {
-    display: inline;
-  }
-  .buttons {
-    display: none;
-    justify-content: right;
-    align-items: flex-start;
-  }
-
-  button {
-    background-color: var(--yellow);
-    color: white;
-    padding: 1em 2.5em 1em 2.5em;
-    font-weight: bold;
-  }
-  .login {
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-  }
-  .signup {
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-  }
-  .icons {
-    display: none;
-  }
-  .links {
-    display: none;
-  }
-  
-  
-  /* Prueba de archivo desplegable  */
- /*  header .dismissible {
-    opacity: 0 !important;
-    height: 0 !important;
-    padding: 0 !important;
-    transition: all 0.3s linear;
-  } */
 }
-
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-
-  body {
-    width: 100%;
-    height: 100%;
-   
-  }
-  .title {
-    display: flex;
-    justify-content: left;
-    align-items: flex-start;
-    margin-top: 2em;
-    margin-left: 2em;
-    font-weight: bold;
-    font-family: "Titillium Web", sans-serif;
-  }
-  .white {
-    color: var(--black);
-  }
-  .yellow {
-    color: var(--yellow);
-  }
-  .hamburger {
-    display: flex;
-    justify-content: right;
-    align-items: flex-start;
-  }
-  .mix {
-    display: flex;
-    justify-content: end;
-    align-content: space-between;
-  }
-  .icons i {
-    padding: 0.5em;
-  }
-  .buttons {
-    display: none;
-    justify-content: right;
-    align-items: flex-start;
-    padding: 0.5em 2.5em 0.5em 2.5em;
-  }
-
-  button {
-    background-color: var(--yellow);
-    color: white;
-    font-weight: bold;
-  }
-  .login {
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-  }
-  .signup {
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-  }
-  .icons {
-    color: white;
-    display: none;
-    justify-content: right;
-    align-items: flex-end;
-    margin-right: 4em;
-  }
-  .icons i {
-    padding: 1em 1em 1em 1em;
-  }
-  .links {
-    color: white;
-    display: none;
-    justify-content: right;
-    align-items: flex-end;
-    font-size: 1rem;
-    font-family: "poppins", sans-serif;
-  }
-  .links button {
-    padding: 1em 3.8em 1em 3.8em;
-    background-color: transparent;
-  }
-  .player-container {
-    display: flex;
-    justify-content: space-around;
-    padding: 0.9em;
-  }
-  .player-container button {
-    width: 20vw;
-  }
-  .modal-content {
-    width: 70%;
-    margin: auto;
-    padding-top: 5em;
-  }
-
-  .all-cards {
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  #card .card-individual {
-    max-width: 30%;
-    margin: 0;
-  }
-  #card > div > p {
-    margin-bottom: 1.5rem;
-  }
-  .btn__close {
-    position: absolute;
-    top: 60px;
-  }
-  /* #container {
-    width: 85%;
-    float: right;
-    height: 100vh;
-    background-color: var(--lightBlack);
-    position: absolute;
-    display: none;
-  }
-  #container > div {
-    padding: 1em;
-    align-items: center;
-  } */
-  
+	#navbar > .banner {
+		height: 7em;
+	}
+	.image-container {
+		margin-top: 7em;
+	}
+	.centered-text {
+		transform: translate(-50%, 55%);
+		margin: 0 auto;
+	}
+	.sliderButtons > button {
+		height: 30px;
+		width: 30px;
+		border: 1px solid white;
+		margin-top: -6em;
+	}
+	.mix {
+		display: flex;
+		justify-content: end;
+		align-content: space-between;
+	}
+	.icons i {
+		padding: 0.5em;
+	}
+	.buttons {
+		display: none;
+		justify-content: right;
+		align-items: flex-start;
+		padding: 0.5em 2.5em 0.5em 2.5em;
+	}
+	button {
+		background-color: var(--yellow);
+		color: white;
+		font-weight: bold;
+	}
+	.login {
+		border-top-left-radius: 25px;
+		border-bottom-left-radius: 25px;
+	}
+	.signup {
+		border-top-right-radius: 25px;
+		border-bottom-right-radius: 25px;
+	}
+	.icons {
+		color: white;
+		display: none;
+		justify-content: right;
+		align-items: flex-end;
+		margin-right: 4em;
+	}
+	.icons i {
+		padding: 1em 1em 1em 1em;
+	}
+	.links {
+		color: white;
+		display: none;
+		justify-content: right;
+		align-items: flex-end;
+		font-size: 1rem;
+		font-family: 'poppins', sans-serif;
+	}
+	.links button {
+		padding: 1em 3.8em 1em 3.8em;
+		background-color: transparent;
+	}
+	.player-container {
+		display: flex;
+		justify-content: space-around;
+		padding: 0.9em;
+	}
+	.player-container button {
+		width: 20vw;
+	}
+	.modal-content {
+		width: 70%;
+		margin: auto;
+		padding-top: 5em;
+	}
+	.all-cards {
+		display: flex;
+		gap: 2rem;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	#card .card-individual {
+		max-width: 30%;
+		margin: 0;
+	}
+	#card > div > p {
+		margin-bottom: 1.5rem;
+	}
+	.btn__close {
+		position: absolute;
+		top: 60px;
+	}
+	.centered-text > div:nth-child(2) {
+		font-family: 'Poppins', sans-serif;
+		font-weight: 200;
+		font-size: 1.1rem;
+		text-align: center;
+		padding: 0 0.6em;
+	}
 }
-
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-
-  body {
-    width: 100%;
-    height: 100%;
-   
-  }
-  .modal-content {
-    width: 50%;
-    margin: auto;
-    padding-top: 10em;
-  }
-  #card .card-individual {
-    max-width: 30%;
-  }
-
-  #navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    transition:0.5s ;
-  }
-  .title {
-    display: flex;
-    justify-content: left;
-    align-items: flex-start;
-    margin-top: 2em;
-    margin-left: 2em;
-    font-weight: 900;
-    font-family: "Titillium Web", sans-serif;
-  }
-  .banner {
-    display: none;
-  }
-  .white {
-    color: var(--white);
-  }
-  .yellow {
-    color: var(--yellow);
-  }
-
-  .mix {
-    display: flex;
-    justify-content: end;
-    align-content: space-between;
-  }
-  .icons i {
-    padding: 0.5em;
-  }
-  .icons div {
-    margin-bottom: 8.2em;
-  }
-  .buttons {
-    display: flex;
-    justify-content: right;
-    align-items: flex-start;
-    transition: all 0.5s ease;
-  }
-  .buttons button:hover {
-    color: var(--black);
-  }
-
-  button {
-    background-color: var(--yellow);
-    color: white;
-    padding: 1em 2.5em 1em 2.5em;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  .login {
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-  }
-  .signup {
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-  }
-  .icons {
-    color: white;
-    display: flex;
-    justify-content: right;
-    align-items: flex-end;
-    margin-right: 4em;
-  }
-  .icons i {
-    padding: 1em 1em 1em 1em;
-    transition: all 0.5s ease;
-  }
-  .icons i:hover {
-    color: var(--yellow);
-    cursor: pointer;
-  }
-  .links {
-    color: white;
-    display: flex;
-    justify-content: right;
-    align-items: flex-end;
-    font-size: 1rem;
-    font-family: "poppins", sans-serif;
-  }
-  .links button {
-    padding: 1em 3.8em 1em 3.8em;
-    background-color: transparent;
-    transition: all 0.5s ease;
-  }
-  .links button:hover {
-    background-color: transparent;
-    color: var(--yellow);
-  }
-
-
-  .player-container {
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .player-container button {
-    width: 20vw;
-  }
+	.modal-content {
+		width: 50%;
+		margin: auto;
+		padding-top: 10em;
+	}
+	#card .card-individual {
+		max-width: 30%;
+	}
+	#navbar {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100px;
+		transition: 0.5s;
+	}
+	.title {
+		display: flex;
+		justify-content: left;
+		align-items: flex-start;
+		margin-top: 2em;
+		margin-left: 2em;
+		font-weight: 900;
+		font-family: 'Titillium Web', sans-serif;
+	}
+	.banner {
+		display: none;
+	}
+	.white {
+		color: var(--white);
+	}
+	.yellow {
+		color: var(--yellow);
+	}
+	.mix {
+		display: flex;
+		justify-content: end;
+		align-content: space-between;
+	}
+	.icons i {
+		padding: 0.5em;
+	}
+	.icons div {
+		margin-bottom: 8.2em;
+	}
+	.buttons {
+		display: flex;
+		justify-content: right;
+		align-items: flex-start;
+		transition: all 0.5s ease;
+	}
+	.buttons button {
+		background-color: var(--yellow);
+		color: white;
+		padding: 1em 2.5em 1em 2.5em;
+		font-weight: bold;
+		cursor: pointer;
+	}
+	.buttons button:hover {
+		color: var(--black);
+	}
+	.login {
+		border-top-left-radius: 25px;
+		border-bottom-left-radius: 25px;
+	}
+	.signup {
+		border-top-right-radius: 25px;
+		border-bottom-right-radius: 25px;
+	}
+	.icons {
+		color: white;
+		display: flex;
+		justify-content: right;
+		align-items: flex-end;
+		margin-right: 4em;
+	}
+	.icons i {
+		padding: 1em 1em 1em 1em;
+		transition: all 0.5s ease;
+	}
+	.icons i:hover {
+		color: var(--yellow);
+		cursor: pointer;
+	}
+	.links {
+		color: white;
+		display: flex;
+		justify-content: right;
+		align-items: flex-end;
+		font-size: 1rem;
+		font-family: 'poppins', sans-serif;
+	}
+	.links button {
+		padding: 1em 3.8em 1em 3.8em;
+		background-color: transparent;
+		transition: all 0.5s ease;
+	}
+	.links button:hover {
+		background-color: transparent;
+		color: var(--yellow);
+	}
+	.player-container {
+		display: flex;
+		justify-content: space-around;
+	}
+	.player-container button {
+		width: 20vw;
+	}
+	.buttons button {
+		display: inline-block;
+		height: 25px;
+		width: 25px;
+		border-radius: 50px;
+		border: 2px solid;
+		border-color: white;
+		/* background-color: white; */
+		margin: 0 100px;
+	}
 }
-
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  /* Code here */
+	/* Code here */
 }
-
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
-  #gamer {
-    max-width: 100%;
-  }
+	#teams {
+		max-width: 100%;
+	}
 }
-
-
