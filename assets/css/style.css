@@ -52,7 +52,7 @@ span:not(.fa-stack) {
 	position: absolute;
 	right: 1.5em;
 	top: 20px;
-	z-index: 5;
+	z-index: 999 !important;
 }
 .btn__close:hover {
 	cursor: pointer;
@@ -105,7 +105,7 @@ span:not(.fa-stack) {
 	display: none;
 	position: absolute;
 	background-color: white;
-	z-index: 10;
+	z-index: 100;
 }
 .modal-content {
 	padding: 2em;
@@ -192,7 +192,7 @@ span:not(.fa-stack) {
 #navbar {
 	position: fixed;
 	width: 100%;
-	z-index: 999999 !important;
+	z-index: 99;
 }
 #navbar > .banner {
 	width: 100%;
@@ -576,6 +576,7 @@ a.icon {
 		display: flex;
 		justify-content: space-around;
 		padding: 0.9em;
+		flex-direction: row;
 	}
 	.player-container button {
 		width: 20vw;
@@ -601,6 +602,7 @@ a.icon {
 	.btn__close {
 		position: absolute;
 		top: 60px;
+		z-index: 999 !important;
 	}
 	.centered-text > div:nth-child(2) {
 		font-family: 'Poppins', sans-serif;
@@ -621,50 +623,59 @@ a.icon {
 		margin: auto;
 		padding-top: 10em;
 	}
-	#card .card-individual {
-		max-width: 30%;
-	}
 	#navbar {
 		position: fixed;
 		top: 0;
 		left: 0;
 		width: 100%;
-		height: 100px;
 		transition: 0.5s;
+		display: flex;
+		height: 8em;
+		gap: 30em;
+	}
+	#navbar > .banner {
+		background: transparent;
+		width: 30%;
+		height: inherit;
 	}
 	.title {
 		display: flex;
-		justify-content: left;
-		align-items: flex-start;
-		margin-top: 2em;
-		margin-left: 2em;
+		align-items: center;
+		padding-left: 2em;
 		font-weight: 900;
+		font-size: 2rem;
 		font-family: 'Titillium Web', sans-serif;
 	}
-	.banner {
+	#navbar > .banner > .title > h1 {
+		color: var(--white);
+	}
+	#navbar > .banner > .hamburger {
 		display: none;
+		z-index: 0;
+	}
+	#navbar > .rightAside {
+		width: 50%;
+		justify-content: flex-end;
+		justify-content: space-between;
+		padding: 1em;
 	}
 	.mix {
 		display: flex;
-		justify-content: end;
-		align-content: space-between;
+		/* justify-content: flex-end; */
+		height: 3em;
 	}
 	.icons i {
 		padding: 0.5em;
 	}
-	.icons div {
-		margin-bottom: 8.2em;
-	}
 	.buttons {
 		display: flex;
-		justify-content: right;
-		align-items: flex-start;
+		align-items: center;
 		transition: all 0.5s ease;
 	}
 	.buttons button {
 		background-color: var(--yellow);
 		color: white;
-		padding: 1em 2.5em 1em 2.5em;
+		padding: 1em 4em;
 		font-weight: bold;
 		cursor: pointer;
 	}
@@ -697,10 +708,11 @@ a.icon {
 	.links {
 		color: white;
 		display: flex;
-		justify-content: right;
-		align-items: flex-end;
+		justify-content: space-around;
 		font-size: 1rem;
 		font-family: 'poppins', sans-serif;
+		height: 50px;
+		padding-left: 4em;
 	}
 	.links button {
 		padding: 1em 3.8em 1em 3.8em;
@@ -711,22 +723,11 @@ a.icon {
 		background-color: transparent;
 		color: var(--yellow);
 	}
-	.player-container {
-		display: flex;
-		justify-content: space-around;
+	.image-container {
+		margin-top: 0em;
 	}
-	.player-container button {
-		width: 20vw;
-	}
-	.buttons button {
-		display: inline-block;
-		height: 25px;
-		width: 25px;
-		border-radius: 50px;
-		border: 2px solid;
-		border-color: white;
-		/* background-color: white; */
-		margin: 0 100px;
+	#card .card-individual {
+		max-width: 30%;
 	}
 }
 /* X-Large devices (large desktops, 1200px and up) */
