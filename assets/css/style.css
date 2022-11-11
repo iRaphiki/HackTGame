@@ -11,8 +11,8 @@
 	--black: #000;
 	--white: #fff;
 	--yellow: #ffc311;
-	--letraCuerpo: #7d7d7e;
-	--tituloCardsNegro: #282828;
+	--bodyLetter: #696969;
+	--tittleCardsBlack: #282828;
 	--footerBg: #070707;
 	width: 100vw;
 	height: 100vh;
@@ -27,10 +27,14 @@ h2 {
 	font-size: 2.7rem;
 }
 h3 {
-	font-size: 1.5rem;
+	font-size: 1.6rem;
+	color: var(--tittleCardsBlack);
 }
 h4 {
 	font-size: 1.1rem;
+}
+span:not(.fa-stack) {
+	color: var(--yellow);
 }
 /* Menú desplegable*/
 .menu_container {
@@ -124,7 +128,7 @@ h4 {
 	align-items: center;
 	justify-content: center;
 	font-family: 'Poppins', sans-serif;
-	background-color: var(--tituloCardsNegro);
+	background-color: var(--tittleCardsBlack);
 	color: white;
 	font-size: 1.5rem;
 	text-align: center;
@@ -141,9 +145,9 @@ h4 {
 }
 #login-box .modal-main form input {
 	font-family: 'Poppins', sans-serif;
-	color: var(--letraCuerpo);
+	color: var(--bodyLetter);
 	width: 100%;
-	border: 1px solid var(--letraCuerpo);
+	border: 1px solid var(--bodyLetter);
 	margin: 1em 0;
 	padding: 1em;
 	font-size: 1rem;
@@ -153,7 +157,7 @@ h4 {
 	margin-right: 0.5em;
 }
 #login-box label {
-	color: var(--letraCuerpo);
+	color: var(--bodyLetter);
 	font-family: 'Poppins', sans-serif;
 }
 #login-box button {
@@ -175,11 +179,11 @@ h4 {
 	font-family: 'Poppins', sans-serif;
 }
 #login-box a:last-of-type {
-	color: var(--letraCuerpo);
+	color: var(--bodyLetter);
 }
 #signup-box .modal-main {
 	font-family: 'Poppins', sans-serif;
-	color: var(--letraCuerpo);
+	color: var(--bodyLetter);
 	text-align: center;
 }
 /* HEADER  */
@@ -205,9 +209,6 @@ h4 {
 	font-weight: bold;
 	font-family: 'Titillium Web', sans-serif;
 	font-size: 1.2rem;
-}
-#navbar > .banner > .title > h1 > span {
-	color: var(--yellow);
 }
 .hamburger {
 	display: flex;
@@ -348,6 +349,8 @@ main > section > div > p {
 }
 /* Images container */
 .player-container {
+	display: flex;
+	flex-direction: column;
 	padding-top: 1.8em;
 	justify-content: space-between;
 	gap: 20px;
@@ -361,14 +364,12 @@ div .image {
 .image-box {
 	position: relative;
 	width: 100%;
-
 	overflow: hidden;
 	box-shadow: 0 4px 10px rgb(0 0 0 / 0.3);
 }
 .player-container > div {
 	position: relative;
 	text-align: center;
-	padding-bottom: 2rem;
 }
 /* Button over image and flex for icon */
 .name-bottom,
@@ -435,17 +436,14 @@ a.icon {
 }
 /* CARDS */
 #card h4 {
-	color: var(--tituloCardsNegro);
+	color: var(--tittleCardsBlack);
 }
 #card p {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 200;
 }
 #card .our-games {
-	padding: 0em 1rem;
-}
-#card .our-games h2 span {
-	color: var(--yellow);
+	padding: 0em 1em 2.5em;
 }
 /* EACH CARDS */
 #card .card-individual {
@@ -471,34 +469,37 @@ a.icon {
 /* CARD ICON & ANCHOR  */
 #card i.fa-desktop {
 	margin: 1rem 0 1.5rem;
+	font-size: large;
 }
 #card .card-body a {
 	font-family: 'Poppins', sans-serif;
-	color: grey;
+	font-size: 0.7rem;
+	color: var(--bodyLetter);
 	text-decoration: none;
-	margin-left: 0.3rem;
+	margin-left: 0.2rem;
 }
 #card .card-body a:hover {
 	color: var(--yellow);
 }
 /* FOOTER */
-.footer_h3 {
-	color: white;
-	text-align: center;
-	font-family: 'Titillium Web', sans-serif;
-	padding-top: 10px;
-}
-.footer {
-	color: white;
+#footer {
+	color: var(--white);
 	text-align: center;
 	font-family: 'Poppins', sans-serif;
-	font-size: 1rem;
-	padding-bottom: 10px;
+	font-size: 1.275rem;
 	background-color: var(--footerBg);
 	width: 100%;
+	height: 6.7em;
+	padding: 1.2em;
 }
-.span {
-	color: var(--yellow);
+#footer > h3 {
+	font-size: 1.8rem;
+	font-family: 'Titillium Web', sans-serif;
+	color: white;
+	margin: 0 auto;
+}
+#footer > p > span {
+	text-decoration: underline;
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -608,6 +609,10 @@ a.icon {
 		text-align: center;
 		padding: 0 0.6em;
 	}
+	#card > div > div > div > div > p {
+		font-weight: 400;
+		color: var(--bodyLetter);
+	}
 }
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
@@ -638,12 +643,6 @@ a.icon {
 	}
 	.banner {
 		display: none;
-	}
-	.white {
-		color: var(--white);
-	}
-	.yellow {
-		color: var(--yellow);
 	}
 	.mix {
 		display: flex;
