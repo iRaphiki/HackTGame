@@ -27,6 +27,7 @@ window.addEventListener('scroll', function () {
 
 /* ------------------MODAL-BOX---------------------------- */
 // Open and close modal/login window
+/*
 const loginWindow = () => {
 	window.addEventListener('load', () => {
 		const openModalLogin = document.getElementById('login');
@@ -56,12 +57,13 @@ const loginWindow = () => {
 	});
 };
 loginWindow();
-
+*/
+/*
 //FUNCIÓN BOTÓN CLOSE
 document.querySelector('.btn__close').addEventListener('click', () => {
 	document.querySelector('.menu_container').classList.toggle('open');
 });
-
+*/
 // Slider
 const slide = () => {
 	let imgs = document.querySelectorAll('.slide');
@@ -88,3 +90,44 @@ const slide = () => {
 // setInterval(function () {
 // 	slide();
 // }, 5000);
+
+
+/* ------------------Copy MODAL-BOX---------------------------- */
+// Open and close modal/login window
+const loginWindow = () => {
+	window.addEventListener('load', () => {
+		const openModalLogin = document.querySelectorAll('.login');
+		const openModalSignup = document.querySelectorAll('.signup');
+		const modalWindowLogin = document.getElementById('login-box');
+		const modalWindowSign = document.getElementById('signup-box');
+
+		const loginShowModalWindow = () => {
+			modalWindowLogin.style.display = 'block';
+		};
+		const signupShowModalWindow = () => {
+			modalWindowSign.style.display = 'block';
+		};
+console.log(openModalLogin);
+console.log(openModalSignup);
+
+		openModalLogin.forEach(element => {
+			element.addEventListener('click', loginShowModalWindow);
+		});
+		openModalSignup.forEach(element => {
+			element.addEventListener('click', signupShowModalWindow);
+		});
+		//openModalLogin.addEventListener('click', loginShowModalWindow);
+		//openModalSignup.addEventListener('click', signupShowModalWindow);
+
+		const closeModalButton = document.getElementById('close-modal');
+		const closeModalButtonSign = document.getElementById('close-sign');
+
+		const hideModalWindow = () => {
+			modalWindowLogin.style.display = 'none';
+			modalWindowSign.style.display = 'none';
+		};
+		closeModalButton.addEventListener('click', hideModalWindow);
+		closeModalButtonSign.addEventListener('click', hideModalWindow);
+	});
+};
+loginWindow();

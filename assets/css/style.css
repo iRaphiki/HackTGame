@@ -1,3 +1,5 @@
+
+
 *,
 ::before,
 ::after {
@@ -37,6 +39,7 @@ span:not(.fa-stack) {
 	color: var(--yellow);
 }
 /* Menú desplegable*/
+
 .menu_container {
 	display: none;
 	background-color: var(--footerBg);
@@ -44,14 +47,13 @@ span:not(.fa-stack) {
 .menu_container.open {
 	display: block;
 }
+
 .btn__close {
 	background-color: var(--lightBlack);
 	color: var(--white);
 	font-size: 2em;
-	font-weight: bolder;
 	position: absolute;
-	right: 1.5em;
-	top: 20px;
+	right: 1em;
 	z-index: 999 !important;
 }
 .btn__close:hover {
@@ -78,16 +80,45 @@ span:not(.fa-stack) {
 	width: 100%;
 }
 #container {
-	width: 85%;
+	width: 100%;
 	float: right;
-	height: 100vh;
+	/* height: 100vh; */
 	background-color: var(--lightBlack);
 	position: absolute;
+	z-index: 9999999;
+/* 	justify-content: flex-start;
+ */	
 }
+
 #container > div {
-	padding: 1em;
-	align-items: center;
+	padding: 2em 1em 0;
+    color: var(--white);
+    height: 100vh;
+	margin-top: -80px;
+	margin-left: 25%;
 }
+#container > div > div:nth-child(2){
+	margin-top: 2em;
+}
+#container > div > div:nth-child(2) > a {
+	color: var(--white);
+	text-decoration: none;
+}
+#container > div > div:nth-child(2) > a:hover{
+	color: var(--yellow);
+}
+/* En la vista tablet hay que ponerlo al 100% */
+#container > div > div:nth-child(2) > hr:nth-child(2){
+	width: 70%;
+}
+#container > div > div:nth-child(2) > hr{
+	height: 1px;
+	color: var(--white);
+	background-color: var(--bodyLetter);
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+ 
 /* Prueba de archivo desplegable  */
 .dismissible {
 	opacity: 0 !important;
@@ -599,11 +630,10 @@ a.icon {
 	#card > div > p {
 		margin-bottom: 1.5rem;
 	}
-	.btn__close {
+	/* .btn__close {
 		position: absolute;
-		top: 60px;
 		z-index: 999 !important;
-	}
+	} */
 	.centered-text > div:nth-child(2) {
 		font-family: 'Poppins', sans-serif;
 		font-weight: 200;
@@ -615,6 +645,17 @@ a.icon {
 		font-weight: 400;
 		color: var(--bodyLetter);
 	}
+	#container > div {
+		padding: 2em 1em 0;
+		height: 100vh;
+		margin-top: -112px;
+		margin-left: 30%;
+		
+	}
+	#container > div > div:nth-child(2) > hr:nth-child(2){
+		width: 100%;
+	}
+
 }
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
