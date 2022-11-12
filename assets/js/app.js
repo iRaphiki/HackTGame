@@ -1,3 +1,6 @@
+window.addEventListener('load', ()=>{
+
+
 /* ------------------SCROLL-TOP---------------------------- */
 //let alertBox = document.querySelector(".alert");
 let menu = document.querySelector('.hamburger');
@@ -131,3 +134,4 @@ console.log(openModalSignup);
 	});
 };
 loginWindow();
+})
