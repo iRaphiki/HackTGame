@@ -89,18 +89,54 @@
 				</div>
 			</div>
 		</div>
+		<!-- Contact-Modal -->
+		<div id="contact-box">
+			<div class="contact-content">
+				<div id="close-contact" class="close"><i class="fa-solid fa-xmark"></i></div>
+			  <div class="contact-form">
+				<form action="">
+				  <input type="text" name="name" placeholder="Name" />
+				  <input type="email" name="email" placeholder="Email Adress" />
+				  <input type="tel" name="phone" placeholder="Phone Number" />
+				  <input type="text" name="subject" placeholder="Subject" />
+				  <textarea
+					name="message"
+					id="message"
+					rows="7"
+					placeholder="Message"
+				  ></textarea>
+				  <button>SUBMIT</button>
+				</form>
+			  </div>
+			  <div class="contact-info">
+				<p>
+				  <i class="fa-solid fa-location-dot"></i>C. Compositor Lehmberg
+				  Ruiz, 17, MÃ¡laga
+				</p>
+				<p><i class="fa-solid fa-envelope"></i>info@codespaceacademy.com</p>
+				<p><i class="fa-solid fa-mobile-screen"></i>682 82 70 17</p>
+				<p><i class="fa-solid fa-phone-flip"></i>952 300 426</p>
+				<p>
+				  Lorem ipsum dolor, sit amet <span>consectetur adipisicing elit.</span> Nemo
+				  impedit praesentium nihil, <span>illo delectus dolorem</span> sapiente temporibus
+				  iste quo <span>necessitatibus quae rerum et optio similique.</span> Aut ipsam
+				  minima fugiat laudantium.
+				</p>
+			  </div>
+			</div>
+		  </div>
 		<!-- Menu emergente -->
 		<div
 			id="container"
 			class="alert dismissible">
 			<div class="menu_container open">
-				<div><button class="btn__close">X</button></div>
+				<div><button class="btn__close"><i class="fa-solid fa-xmark"></i></button></div>
 				<div>
-					<a href="#" target="_self" class="login_a">Home</a><hr>
-					<a href="#" target="#login-box" class="login_a">About</a><hr>
-					<a href="#" target="_blanck" class="login_a">Games</a><hr>
-					<a href="#" target="_blanck" class="login_a">eSport</a><hr>
-					<a href="#" target="_blanck" class="login_a">Contact</a><hr>
+					<a href="#" class="login_a">Home</a><hr>
+					<a href="#" class="login_a">About</a><hr>
+					<a href="#" class="login_a">Games</a><hr>
+					<a href="#" class="login_a">eSport</a><hr>
+					<a href="#" class=" contact botones_div">Contact</a><hr>
 				</div>
 				<div class="icons_div">
 					<i class="icons_login fa-brands fa-twitter"></i>
@@ -133,8 +169,8 @@
 					<div class="mix">
 						<div class="icons">
 							<i class="fa-brands fa-twitter fa-lg"></i>
-							<i class="fa-brands fa-facebook fa-lg"></i>
 							<i class="fa-brands fa-twitch fa-lg"></i>
+							<i class="fa-brands fa-facebook-f"></i>
 							<i class="fa-brands fa-instagram fa-lg"></i>
 							<i class="fa-brands fa-youtube fa-lg"></i>
 						</div>
@@ -156,7 +192,7 @@
 						<button>About</button>
 						<button>Game</button>
 						<button>eSport</button>
-						<button>Contact</button>
+						<button class="contact">Contact</button>
 					</div>
 				</div>
 				<!-- Prueba de archivo desplegable -->

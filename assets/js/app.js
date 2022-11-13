@@ -69,8 +69,10 @@ const loginWindow = () => {
   window.addEventListener("load", () => {
     const openModalLogin = document.querySelectorAll(".login");
     const openModalSignup = document.querySelectorAll(".signup");
+	const openModalContact = document.querySelectorAll(".contact");	/*  */
     const modalWindowLogin = document.getElementById("login-box");
     const modalWindowSign = document.getElementById("signup-box");
+    const modalWindowContact = document.getElementById("contact-box");/*  */
 
     const loginShowModalWindow = () => {
       modalWindowLogin.style.display = "block";
@@ -78,8 +80,15 @@ const loginWindow = () => {
     const signupShowModalWindow = () => {
       modalWindowSign.style.display = "block";
     };
+	/*  */
+	const contactShowModalWindow = () => {
+		modalWindowContact.style.display = "block";
+	  };
+	  /*  */
     console.log(openModalLogin);
     console.log(openModalSignup);
+	console.log(openModalContact);/*  */
+
 
     openModalLogin.forEach((element) => {
       element.addEventListener("click", loginShowModalWindow);
@@ -87,17 +96,28 @@ const loginWindow = () => {
     openModalSignup.forEach((element) => {
       element.addEventListener("click", signupShowModalWindow);
     });
+	/*  */
+	openModalContact.forEach((element) => {
+		element.addEventListener("click", contactShowModalWindow);
+	  });
+	  /*  */
     
     const closeModalButton = document.getElementById("close-modal");
     const closeModalButtonSign = document.getElementById("close-sign");
+	const closeModalButtonContact = document.getElementById("close-contact");/*  */
+	console.log(closeModalButton);
+    console.log(closeModalButtonSign);
+	console.log(openModalContact);
 
     const hideModalWindow = () => {
       modalWindowLogin.style.display = "none";
       modalWindowSign.style.display = "none";
+	  modalWindowContact.style.display = "none";/*  */
       banerDissmisible.classList.remove("dismissible");
     };
     closeModalButton.addEventListener("click", hideModalWindow);
     closeModalButtonSign.addEventListener("click", hideModalWindow);
+	closeModalButtonContact.addEventListener("click", hideModalWindow);/*  */
   });
 };
 loginWindow();

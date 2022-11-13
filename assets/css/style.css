@@ -19,6 +19,7 @@
   --capa1: 1;
   --capa2: 10;
   --capa3: 100;
+  --capa4: 101
 }
 
 h1,
@@ -57,7 +58,7 @@ span:not(.fa-stack) {
   font-size: 2em;
   position: absolute;
   right: 1em;
-  z-index: 999 !important;
+  z-index: var(--capa2) !important;
 }
 .btn__close:hover {
   cursor: pointer;
@@ -98,7 +99,7 @@ span:not(.fa-stack) {
   float: right;
   background-color: var(--lightBlack);
   position: absolute;
-  z-index: 9999999;
+  z-index: var(--capa3);
 }
 #container > div {
   padding: 2em 1em 0;
@@ -135,18 +136,92 @@ span:not(.fa-stack) {
 }
 /* MODALS */
 #login-box,
-#signup-box {
+#signup-box,
+#contact-box {
   width: 100%;
   height: 100vh;
   display: none;
   position: fixed;
   background-color: white;
-  z-index: 100;
+  z-index: var(--capa4);
 }
 .modal-content {
   padding: 2em;
   display: flex;
   flex-wrap: wrap;
+}
+.contact-content {
+  padding: 4rem 1rem 0;
+  /* background-color: darkolivegreen; */
+  display: flex;
+  flex-wrap: wrap;
+}
+.contact-form {
+  width: 100%;
+}
+.contact-content form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#close-contact{
+	padding: 1.3rem;
+    color: lightgray;
+    margin-left: 85%;
+}
+#close-contact:hover{
+    color: var(--yellow);
+}
+.contact-content input {
+  width: 48%;
+  padding: 1em;
+  margin-bottom: 1rem;
+  border: 1px solid var(--letraCuerpo);
+  font-family: "Poppins", sans-serif;
+}
+.contact-content textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 1em;
+  border: 1px solid var(--letraCuerpo);
+  font-family: "Poppins", sans-serif;
+}
+.contact-content button {
+  padding: 1em 2em;
+  background-color: var(--yellow);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+.contact-content button.btn-cancel{
+	background-color: var(--tittleCardsBlack);
+}
+.contact-info {
+  margin-top: 2em;
+}
+.contact-info p {
+  color: var(--tituloCardsNegro);
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 0.5em;
+}
+.contact-info p i {
+  color: var(--yellow);
+  margin-right: 0.5em;
+}
+.contact-info p:last-of-type {
+  margin-top: 1.5em;
+}
+.contact-info p span {
+  font-weight: 600;
+}
+.contact-info p span:nth-child(2) {
+  font-weight: normal;
+  text-decoration: underline;
+}
+.contact-info p span:last-of-type {
+  color: var(--yellow);
+  font-weight: 600;
 }
 .modal-header,
 .modal-main,
@@ -228,7 +303,7 @@ span:not(.fa-stack) {
 #navbar {
   position: fixed;
   width: 100%;
-  z-index: 99;
+  z-index: var(--capa1);
 }
 #navbar > .banner {
   width: 100%;
@@ -338,7 +413,7 @@ span:not(.fa-stack) {
   background-color: transparent;
   transition: all 0.3s linear;
   margin-top: -4em;
-  z-index: 1000;
+  z-index: var(--capa1);
 }
 .centered-text {
   color: white;
@@ -433,7 +508,7 @@ div .image {
   top: 76.6%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 9;
+  z-index: var(--capa2);
   cursor: zoom-in;
   align-items: center;
 }
@@ -658,6 +733,40 @@ a:hover {
   #container > div > div:nth-child(2) {
     margin-top: 0.8em;
   }
+  /* Contact-Modal */
+  .modal-content {
+    width: 70%;
+    margin: auto;
+    padding-top: 5em;
+  }
+  .all-cards {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  #card .card-individual {
+    max-width: 30%;
+    margin: 0;
+  }
+  #card > div > p {
+    margin-bottom: 1.5rem;
+  }
+  .contact-content {
+    padding: 0;
+    width: 95%;
+    height: 100%;
+    align-content: center;
+    margin: auto;
+  }
+  .contact-form {
+    width: 55%;
+    padding-right: 2em;
+  }
+  .contact-info {
+    width: 45%;
+    margin: 0;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -777,6 +886,22 @@ a:hover {
   #footer > p > span {
     text-decoration: underline;
   }
+  /* Contact-Modal */
+  .modal-content {
+    width: 50%;
+    margin: auto;
+    padding-top: 10em;
+  }
+  #card .card-individual {
+    max-width: 30%;
+  }
+  .contact-content {
+    padding: 0 1rem;
+    width: 80%;
+    height: 100%;
+    align-content: center;
+    margin: auto;
+  }
 }
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
@@ -785,16 +910,16 @@ a:hover {
     margin-right: 4em;
   }
   .buttons button {
-   padding: 15px 30px;
-    font-size: .7rem;
+    padding: 15px 30px;
+    font-size: 0.7rem;
   }
   .icons i {
     font-size: 1.25rem;
   }
   .links {
-	justify-content: space-between;
+    justify-content: space-between;
     padding: 1em 0;
-}
+  }
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
