@@ -73,32 +73,33 @@ document.querySelector('.btn__close').addEventListener('click', () => {
 	document.querySelector('.menu_container').classList.toggle('open');
 });
 */
-// Slider
-const slide = () => {
-  let imgs = document.querySelectorAll(".slide");
-  let sig = 0;
-  for (i = 0; i < imgs.length; i++) {
-    if (imgs[i].classList.contains("active")) {
-      imgs[i].classList.remove("active");
-      sig = i + 1;
-      //imgs[i].classList.add('active');
-    }
-  }
-  if (sig > imgs.length - 1) {
-    sig = 0;
-  }
-  imgs[sig].classList.add("active");
+// ----- Slider new:
+function manualSlideShow() {
 
-  // document.querySelectorAll('.slide').forEach(elements =>{
-  //   if(elements.classList.contains('active')){
-  //     elements.classList.remove('active');
-  //   }
-  // });
-};
+}
+let slides = document.querySelectorAll('.slide');
+let btns = document.querySelectorAll('.circle');
+let currentSlide = 1;
 
-// setInterval(function () {
-// 	slide();
-// }, 5000);
+// Manual nav:
+let manualNav = function(manual){
+  slides.forEach((slide) =>{
+    slide.classList.remove('active');
+
+    btns.forEach((btn) => {
+      btn.classList.remove('active');
+    })
+  })
+  slides[manual].classList.add('active');
+  btns[manual].classList.add('active');
+}
+btns.forEach((btn, i) => {
+  btn.addEventListener("click", () => {
+    manualNav(i);
+    currentSlide = i;
+  })
+})
+manualSlideShow();
 
 /* ------------------Copy MODAL-BOX---------------------------- */
 // Open and close modal/login window

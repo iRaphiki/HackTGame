@@ -82,11 +82,11 @@ span:not(.fa-stack) {
   width: 100%;
   margin-top: 1em;
 }
-#container > div > div.botones_div > button{
-	width: 50%;
-	padding: 1em;
-	background-color: var(--yellow);
-	border-radius: 0;
+#container > div > div.botones_div > button {
+  width: 50%;
+  padding: 1em;
+  background-color: var(--yellow);
+  border-radius: 0;
 }
 #container {
   width: 100%;
@@ -286,10 +286,11 @@ span:not(.fa-stack) {
 }
 /* Slider show */
 .slider {
+  display: block;
+  width: 100%;
+  height: 100vh;
   text-align: center;
   overflow: hidden;
-  z-index: 20;
-  padding-top: 5em;
 }
 .image-container {
   display: flex;
@@ -316,6 +317,14 @@ span:not(.fa-stack) {
 #slider > div.image-container > img.slide.active {
   opacity: 1;
   padding-top: 5.3em;
+  
+
+}
+/* .active {
+	background-color: var(--white);
+} */
+#slider > div.sliderButtons > button.active{
+  background-color: var(--white);
 }
 
 @keyframes fader {
@@ -352,11 +361,9 @@ span:not(.fa-stack) {
   left: 50%;
   transform: translate(-50%, -2%);
   text-shadow: 1px 4px 8px var(--black);
-
 }
 #centered-title > h2 {
   text-align: center;
-  
 }
 .centered-text > div:nth-child(2) {
   font-family: "Poppins", sans-serif;
@@ -381,10 +388,10 @@ span:not(.fa-stack) {
 }
 main > section > div > p {
   line-height: 1.4;
-  color: #7d7d7e;
+  color: var(--bodyLetter);
   font-family: "Poppins Web", sans-serif;
   font-weight: 200;
-  font-size: 0.9rem;
+  font-size: 1.24rem;
   padding-top: 0.9em;
 }
 /* Images container */
@@ -480,7 +487,9 @@ a.icon {
 }
 #card p {
   font-family: "Poppins", sans-serif;
-  font-weight: 200;
+  /* font-weight: 200; */
+  font-size: 0.95rem;
+  color: var(--bodyLetter);
 }
 #card .our-games {
   padding: 0em 1em 2.5em;
@@ -548,15 +557,17 @@ a.icon {
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   #navbar > .banner {
-/*     height: 7em;
- */  }
+    /*     height: 7em;
+ */
+  }
   .image-container {
-  /*   margin-top: 7em; */
+    /*   margin-top: 7em; */
   }
   .centered-text {
     transform: translate(-50%, 37%);
-/*     margin: 0 auto;
- */  }
+    /*     margin: 0 auto;
+ */
+  }
   .sliderButtons > button {
     height: 30px;
     width: 30px;
@@ -612,13 +623,12 @@ a.icon {
     padding: 1em 3.8em 1em 3.8em;
     background-color: transparent;
   }
-  .body-cards{
-	display: flex;
+  .body-cards {
+    display: flex;
     justify-content: space-around;
-
   }
   .player-container {
-	padding: 0.9em;
+    padding: 0.9em;
 
     flex-direction: row;
   }
@@ -631,35 +641,26 @@ a.icon {
     padding-top: 5em;
   }
   .all-cards {
-    
-   gap: 1.5em;
+    gap: 1.3em;
     flex-wrap: wrap;
-  
-	
-
   }
   #card .card-individual {
     max-width: 30%;
     margin: 0;
   }
-  #card > div > div > div > div > p{
-	font-size: .9rem;
-
+  #card > div > div > div > div > p {
+    font-size: 1.1rem;
+    color: var(--bodyLetter);
+    font-family: "Poppins Web", sans-serif;
   }
   #card > div > p {
     margin-bottom: 1.5rem;
   }
-  /* .btn__close {
-		position: absolute;
-		z-index: 999 !important;
-	} */
+
   .centered-text > div:nth-child(2) {
     padding: 0 1.5em;
   }
-  /* #card > div > div > div > div > p {
-    font-weight: 400;
-    color: var(--bodyLetter);
-  } */
+
   #container > div {
     padding: 2em 1em 0;
     height: 100vh;
@@ -668,8 +669,8 @@ a.icon {
   #container > div > div:nth-child(2) > hr:nth-child(2) {
     width: 85%;
   }
-  #container > div > div.icons_div{
-	padding: 1.5em;
+  #container > div > div.icons_div {
+    padding: 1.5em;
   }
 }
 /* Large devices (desktops, 992px and up) */
@@ -688,12 +689,12 @@ a.icon {
     background: transparent;
     width: 30%;
     height: inherit;
-	margin-left: 2em;
+    margin-left: 2em;
   }
- 
+
   #navbar > .banner > .title > h1 {
     color: var(--white);
-	font-size: 1.5rem;
+    font-size: 1.5rem;
   }
   #navbar > div.banner > div.hamburger > span {
     visibility: hidden;
@@ -701,19 +702,19 @@ a.icon {
   #navbar > .rightAside {
     width: 44%;
     padding: 1em;
-	margin-right: 2em;
+    margin-right: 2em;
   }
   .mix {
     display: flex;
     height: 3em;
-	justify-content: space-between;
+    justify-content: space-between;
   }
-  
+
   .buttons {
     display: flex;
     align-items: center;
     transition: all 0.5s ease;
-	padding: 0;
+    padding: 0;
   }
   .buttons button {
     background-color: var(--yellow);
@@ -721,7 +722,7 @@ a.icon {
     padding: 8px 25px;
     font-weight: bold;
     cursor: pointer;
-	font-size: .6rem;
+    font-size: 0.6rem;
   }
   .buttons button:hover {
     color: var(--black);
@@ -743,18 +744,17 @@ a.icon {
     /* margin-right: 4em; */
   }
   .icons i {
-	font-size: 1rem;
-	padding: .5em;
+    font-size: 1rem;
+    padding: 0.5em;
   }
   .icons i:hover {
     color: var(--yellow);
     cursor: pointer;
   }
   .links {
-	margin-right: 1.35em;
+    margin-right: 1.35em;
     display: flex;
-	gap: 3em;
-    
+    gap: 3em;
   }
   .links button {
     padding: 0;
@@ -778,7 +778,6 @@ a.icon {
     font-size: 2.2rem;
   }
   .centered-text > div > p {
-    
     width: 55%;
     margin: 0 auto;
   }
@@ -788,7 +787,7 @@ a.icon {
     margin-top: -4.5em;
   }
   #slider > div.image-container > img.slide.active {
-	padding-top: 0;
+    padding-top: 0;
   }
 }
 /* X-Large devices (large desktops, 1200px and up) */
