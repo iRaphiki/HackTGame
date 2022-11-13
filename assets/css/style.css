@@ -44,7 +44,7 @@ span:not(.fa-stack) {
 
 .menu_container {
   display: none;
-  background-color: var(--footerBg);
+  background-color: var(--tittleCardsBlack);
 }
 .menu_container.open {
   display: block;
@@ -80,6 +80,13 @@ span:not(.fa-stack) {
 .botones_div {
   display: inline-flex;
   width: 100%;
+  margin-top: 1em;
+}
+#container > div > div.botones_div > button{
+	width: 50%;
+	padding: 1em;
+	background-color: var(--yellow);
+	border-radius: 0;
 }
 #container {
   width: 100%;
@@ -108,15 +115,15 @@ span:not(.fa-stack) {
 #container > div > div:nth-child(2) > a:hover {
   color: var(--yellow);
 }
-/* En la vista tablet hay que ponerlo al 100% */
-#container > div > div:nth-child(2) > hr:nth-child(2) {
+/* En la vista tablet hay que ponerlo al 70% */
+/* #container > div > div:nth-child(2) > hr:nth-child(2) {
   width: 70%;
-}
+} */
 #container > div > div:nth-child(2) > hr {
   height: 1px;
   color: var(--white);
   background-color: var(--bodyLetter);
-  margin-top: 1em;
+  margin-top: 2em;
   margin-bottom: 1em;
 }
 
@@ -659,7 +666,10 @@ a.icon {
     margin-left: 30%;
   }
   #container > div > div:nth-child(2) > hr:nth-child(2) {
-    width: 100%;
+    width: 85%;
+  }
+  #container > div > div.icons_div{
+	padding: 1.5em;
   }
 }
 /* Large devices (desktops, 992px and up) */
@@ -782,6 +792,7 @@ a.icon {
   }
 }
 /* X-Large devices (large desktops, 1200px and up) */
+/*
 @media (min-width: 1200px) {
   .modal-content {
     width: 50%;
@@ -815,7 +826,6 @@ a.icon {
   }
   .mix {
     display: flex;
-    /* justify-content: flex-end; */
     height: 3em;
     border: 1px solid red;
   }
@@ -904,6 +914,7 @@ a.icon {
 	padding-top: 0;
   }
 }
+*/
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
   #teams {
