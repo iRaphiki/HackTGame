@@ -1,3 +1,4 @@
+
 /* ------------------SCROLL-TOP---------------------------- */
 //let alertBox = document.querySelector(".alert");
 let menu = document.querySelector(".hamburger");
