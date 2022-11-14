@@ -116,48 +116,54 @@
 				</div>
 			</div>
 		</div>
+		<!-- Contact-Modal -->
+		<div id="contact-box">
+			<div class="contact-content">
+				<div id="close-contact" class="close"><i class="fa-solid fa-xmark fa-2x"></i></div>
+			  <div class="contact-form">
+				<form action="">
+				  <input type="text" name="name" placeholder="Name" />
+				  <input type="email" name="email" placeholder="Email Adress" />
+				  <input type="tel" name="phone" placeholder="Phone Number" />
+				  <input type="text" name="subject" placeholder="Subject" />
+				  <textarea
+					name="message"
+					id="message"
+					rows="7"
+					placeholder="Message"
+				  ></textarea>
+				  <button>SUBMIT</button>
+				</form>
+			  </div>
+			  <div class="contact-info">
+				<p>
+				  <i class="fa-solid fa-location-dot"></i>C. Compositor Lehmberg
+				  Ruiz, 17, Málaga
+				</p>
+				<p><i class="fa-solid fa-envelope"></i>info@codespaceacademy.com</p>
+				<p><i class="fa-solid fa-mobile-screen"></i>682 82 70 17</p>
+				<p><i class="fa-solid fa-phone-flip"></i>952 300 426</p>
+				<p>
+				  Lorem ipsum dolor, sit amet <b>consectetur adipisicing elit.</b> Nemo
+				  impedit praesentium nihil, <u>illo delectus dolorem</u> sapiente temporibus
+				  iste quo <b><span>necessitatibus quae rerum et optio similique.</span></b> Aut ipsam
+				  minima fugiat laudantium.
+				</p>
+			  </div>
+			</div>
+		  </div>
 		<!-- Menu emergente -->
 		<div
 			id="container"
 			class="alert dismissible">
 			<div class="menu_container open">
-				<div><button class="btn__close">X</button></div>
+				<div><button class="btn__close"><i class="fa-solid fa-xmark"></i></button></div>
 				<div>
-					<a
-						href="#"
-						target="_self"
-						class="login_a"
-						>Home</a
-					>
-					<hr />
-					<a
-						href="#"
-						target="#login-box"
-						class="login_a"
-						>About</a
-					>
-					<hr />
-					<a
-						href="#"
-						target="_blanck"
-						class="login_a"
-						>Games</a
-					>
-					<hr />
-					<a
-						href="#"
-						target="_blanck"
-						class="login_a"
-						>eSport</a
-					>
-					<hr />
-					<a
-						href="#"
-						target="_blanck"
-						class="login_a"
-						>Contact</a
-					>
-					<hr />
+					<a href="#" class="login_a">Home</a><hr>
+					<a href="#" class="login_a">About</a><hr>
+					<a href="#" class="login_a">Games</a><hr>
+					<a href="#" class="login_a">eSport</a><hr>
+					<a href="#" class=" contact botones_div">Contact</a><hr>
 				</div>
 				<div class="icons_div">
 					<i class="icons_login fa-brands fa-twitter"></i>
@@ -190,8 +196,8 @@
 					<div class="mix">
 						<div class="icons">
 							<i class="fa-brands fa-twitter fa-lg"></i>
-							<i class="fa-brands fa-facebook fa-lg"></i>
 							<i class="fa-brands fa-twitch fa-lg"></i>
+							<i class="fa-brands fa-facebook-f"></i>
 							<i class="fa-brands fa-instagram fa-lg"></i>
 							<i class="fa-brands fa-youtube fa-lg"></i>
 						</div>
@@ -213,31 +219,9 @@
 						<button>About</button>
 						<button>Game</button>
 						<button>eSport</button>
-						<button>Contact</button>
+						<button class="contact">Contact</button>
 					</div>
 				</div>
-				<!-- Prueba de archivo desplegable -->
-				<!-- <div class="alert dismissible">
-					<button class="btn__close">X</button>
-					<div>
-						<p class="login_p border-x">Home</p>
-						<p class="login_p">About</p>
-						<p class="login_p">Games</p>
-						<p class="login_p">eSport</p>
-						<p class="login_p">Contact</p>
-					</div>
-					<div>
-						<i class="icons_login fa-brands fa-twitter"></i>
-						<i class="icons_login fa-brands fa-twitch"></i>
-						<i class="icons_login fa-brands fa-facebook-f"></i>
-						<i class="icons_login fa-brands fa-instagram"></i>
-						<i class="icons_login fa-brands fa-youtube"></i>
-					</div>
-					<div class="botones_div">
-						<button class="login">LOGIN</button>
-						<button class="signup">SIGN UP</button>
-					</div>
-				</div> -->
 			</nav>
 			<div id="slider">
 				<div class="image-container">
@@ -266,19 +250,17 @@
 					</div>
 					<div id="centered-paragraph">
 						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-							corporis eius ab animi ducimus itaque ratione aspernatur incidunt,
-							quae error.
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias impedit a vero voluptate eiu voluptatem et dolores banditis, veritatis excepturi aperiam amet commodi corrupti sunt.
 						</p>
 					</div>
 				</div>
 				<div class="sliderButtons">
-					<button id="circle1">&nbsp;</button>
-					<button id="circle2">&nbsp;</button>
-					<button id="circle3">&nbsp;</button>
-					<button id="circle4">&nbsp;</button>
-					<button id="circle5">&nbsp;</button>
-					<button id="circle6">&nbsp;</button>
+					<button class="circle active">&nbsp;</button>
+					<button class="circle">&nbsp;</button>
+					<button class="circle">&nbsp;</button>
+					<button class="circle">&nbsp;</button>
+					<button class="circle">&nbsp;</button>
+					<button class="circle">&nbsp;</button>
 				</div>
 			</div>
 		</header>
@@ -289,14 +271,11 @@
 					<h2>Our Team</h2>
 					<h2>& Players</h2>
 					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
-						architecto deserunt, ducimus ullam quaerat error eum earum pariatur
-						facilis assumenda voluptates dolorum ratione, et alias recusandae
-						enim unde non iure aliquid accusantium corporis eius necessitatibus
-						nesciunt. Totam qui sed eligendi.
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. sed diam
+						nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpas. Ut wisi inim minin venian, quis nostrud exesi tation ullamcorper suscript labortis nisi ut aliquip.
 					</p>
 				</div>
-				<div class="player-container">
+				<div class="body-cards player-container">
 					<div id="player1">
 						<div class="image-box">
 							<img
@@ -364,12 +343,10 @@
 				<div class="our-games">
 					<h2>Our <span>Games</span></h2>
 					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-						repudiandae rerum laborum doloremque animi nostrum totam eius
-						excepturi voluptatum ut quisquam, accusamus eligendi repellat autem
-						obcaecati a vero.
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. sed diam
+						nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpas. Ut wisi inim minin venian, quis nostrud exesi tation ullamcorper suscript labortis nisi ut aliquip.
 					</p>
-					<div class="all-cards">
+					<div class="body-cards all-cards">
 						<div class="card-individual">
 							<img
 								src="./img/games/game-1.png"
@@ -381,9 +358,9 @@
 								<a href="#">STEAM</a>
 								<a href="#">XBOX ONE</a>
 								<p class="card-text">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit.
-									Dolore, est.
-								</p>
+									Consectetur adipisicing elit, sed diam
+									nonummy nibh euismod tincidum laoreet.
+								</p> 
 							</div>
 						</div>
 						<div class="card-individual">
@@ -397,8 +374,8 @@
 								<a href="#">ORIGIN</a>
 								<a href="#">PLAY STATION 4</a>
 								<p class="card-text">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit.
-									Dolore, est.
+									Consectetur adipisicing elit, sed diam
+									nonummy nibh euismod tincidum laoreet.
 								</p>
 							</div>
 						</div>
@@ -413,8 +390,8 @@
 								<a href="#">STEAM</a>
 								<a href="#">UPLAY</a>
 								<p class="card-text">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit.
-									Dolore, est.
+									Consectetur adipisicing elit, sed diam
+									nonummy nibh euismod tincidum laoreet.
 								</p>
 							</div>
 						</div>
@@ -429,8 +406,8 @@
 								<a href="#">STEAM</a>
 								<a href="#">UPLAY</a>
 								<p class="card-text">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit.
-									Dolore, est.
+									Consectetur adipisicing elit, sed diam
+									nonummy nibh euismod tincidum laoreet.
 								</p>
 							</div>
 						</div>
@@ -445,8 +422,8 @@
 								<a href="#">STEAM</a>
 								<a href="#">UPLAY</a>
 								<p class="card-text">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit.
-									Dolore, est.
+									Consectetur adipisicing elit, sed diam
+									nonummy nibh euismod tincidum laoreet.
 								</p>
 							</div>
 						</div>
@@ -461,9 +438,10 @@
 								<a href="#">STEAM</a>
 								<a href="#">UPLAY</a>
 								<p class="card-text">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit.
-									Dolore, est.
+									Consectetur adipisicing elit, sed diam
+									nonummy nibh euismod tincidum laoreet.
 								</p>
+								
 							</div>
 						</div>
 					</div>
@@ -476,7 +454,7 @@
 				<h3>Hack<span>TGame</span></h3>
 				<p>
 					Made with <i class="fa-solid fa-heart"></i> by
-					<span>CODE SPACE Team</span>
+					<span><u>CODE SPACE Team</u></span>
 				</p>
 			</div>
 		</footer>
